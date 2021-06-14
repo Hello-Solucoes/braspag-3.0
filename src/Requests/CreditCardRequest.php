@@ -4,6 +4,7 @@
 namespace braspag\Requests;
 
 use braspag\Entities\CustomerEntity;
+use braspag\Entities\PaymentEntity;
 
 class CreditCardRequest
 {
@@ -27,42 +28,10 @@ class CreditCardRequest
     /**
      * @param mixed $customerEntity
      */
-    public function setCustomerEntity($customerEntity) 
+    public function setCustomerEntity(CustomerEntity $customerEntity) 
     {
-        return $this->customerEntity = $customerEntity;
-        
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAddressEntity()
-    {
-        return $this->addressEntity;
-    }
-
-    /**
-     * @param mixed $addressEntity
-     */
-    public function setAddressEntity($addressEntity)
-    {
-        $this->addressEntity = $addressEntity;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDeliveryAddressEntity()
-    {
-        return $this->deliveryAddressEntity;
-    }
-
-    /**
-     * @param mixed $deliveryAddressEntity
-     */
-    public function setDeliveryAddressEntity($deliveryAddressEntity)
-    {
-        $this->deliveryAddressEntity = $deliveryAddressEntity;
+        $this->customerEntity = $customerEntity;
+        return $this;
     }
 
     /**
@@ -144,4 +113,24 @@ class CreditCardRequest
     {
         $this->ticketNumberEntity = $ticketNumberEntity;
     }
+
+
+    /**
+     * @return mixed
+     */
+    public function getPayment()
+    {
+        return $this->payment;
+    }
+
+    /**
+     * @param mixed $payment
+     */
+    public function setPayment(PaymentEntity$payment)
+    {
+        $this->payment = $payment;
+        return $this;
+    }
+  
+
 }

@@ -29,6 +29,7 @@ class AddressEntity
     public function setStreet($street)
     {
         $this->street = $street;
+        return $this;
     }
 
     /**
@@ -45,6 +46,7 @@ class AddressEntity
     public function setNumber($number)
     {
         $this->number = $number;
+        return $this;
     }
 
     /**

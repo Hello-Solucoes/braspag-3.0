@@ -3,6 +3,7 @@
 
 namespace braspag\Entities;
 
+use braspag\Entities\AddressEntity;
 
 class CustomerEntity
 {
@@ -12,8 +13,7 @@ class CustomerEntity
     private $birthdate;
     private $address;
     private $deliveryAddress;
-    private $payment;
-
+ 
     /**
      * @return mixed
      */
@@ -28,6 +28,7 @@ class CustomerEntity
     public function setName($name)
     {
         $this->name = $name;
+        return $this;
     }
 
     /**
@@ -44,6 +45,7 @@ class CustomerEntity
     public function setIdentity($identity)
     {
         $this->identity = $identity;
+        return $this;
     }
 
     /**
@@ -60,6 +62,7 @@ class CustomerEntity
     public function setEmail($email)
     {
         $this->email = $email;
+        return $this;
     }
 
     /**
@@ -76,6 +79,7 @@ class CustomerEntity
     public function setBirthdate($birthdate)
     {
         $this->birthdate = $birthdate;
+        return $this;
     }
 
     /**
@@ -89,9 +93,10 @@ class CustomerEntity
     /**
      * @param mixed $address
      */
-    public function setAddress($address)
+    public function setAddress(AddressEntity $address)
     {
         $this->address = $address;
+        return $this;
     }
 
     /**
@@ -105,27 +110,11 @@ class CustomerEntity
     /**
      * @param mixed $deliveryAddress
      */
-    public function setDeliveryAddress($deliveryAddress)
+    public function setDeliveryAddress(AddressEntity $deliveryAddress)
     {
         $this->deliveryAddress = $deliveryAddress;
+        return $this;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getPayment()
-    {
-        return $this->payment;
-    }
-
-    /**
-     * @param mixed $payment
-     */
-    public function setPayment($payment)
-    {
-        $this->payment = $payment;
-    }
-  
 
 
 }
