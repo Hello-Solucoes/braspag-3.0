@@ -1,13 +1,13 @@
 <?php
 
-namespace braspag;
+namespace Braspag;
 
-use braspag\Entities\CustomerEntity;
-use braspag\Entities\AddressEntity;
-use braspag\Entities\PaymentEntity;
-use braspag\Requests\BilletRequest;
-use braspag\Clients\Braspag\Factories\TransactionBilletFactory;
-use braspag\ValidationRules\Billet\ValidationRules;
+use Braspag\Entities\CustomerEntity;
+use Braspag\Entities\AddressEntity;
+use Braspag\Entities\PaymentEntity;
+use Braspag\Requests\BilletRequest;
+use Braspag\Clients\Braspag\Factories\TransactionBilletFactory;
+use Braspag\ValidationRules\Billet\ValidationRules;
 use Rakit\Validation\Validator;
 
 class BilletTransaction

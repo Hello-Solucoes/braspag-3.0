@@ -1,7 +1,7 @@
 <?php
 
 
-namespace braspag\Requests;
+namespace Braspag\Requests;
 
 
 class BilletRequest

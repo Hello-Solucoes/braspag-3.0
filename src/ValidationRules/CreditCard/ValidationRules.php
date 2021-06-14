@@ -1,7 +1,7 @@
 <?php
 
 
-namespace braspag\ValidationRules\CreditCard;
+namespace Braspag\ValidationRules\CreditCard;
 
 class ValidationRules
 {

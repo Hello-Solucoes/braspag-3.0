@@ -1,6 +1,6 @@
 <?php
-use braspag\CreditCardTransaction;
-use braspag\BilletTransaction;
+use Braspag\CreditCardTransaction;
+use Braspag\BilletTransaction;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\ResponseInterface;

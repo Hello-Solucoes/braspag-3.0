@@ -1,7 +1,7 @@
 <?php
 
 
-namespace braspag\Entities;
+namespace Braspag\Entities;
 
 
 class CryptoCurrencyEntity

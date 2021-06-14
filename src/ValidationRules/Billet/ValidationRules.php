@@ -1,7 +1,7 @@
 <?php
 
 
-namespace braspag\ValidationRules\Billet;
+namespace Braspag\ValidationRules\Billet;
 
 class ValidationRules
 {

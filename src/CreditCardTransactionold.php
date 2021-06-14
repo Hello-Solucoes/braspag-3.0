@@ -1,27 +1,27 @@
 <?php
 
-namespace braspag;
+namespace Braspag;
 
-use braspag\Entities\CustomerEntity;
-use braspag\Entities\AddressEntity;
-use braspag\Entities\CreditCardEntity;
-use braspag\Entities\PaymentEntity;
-use braspag\Entities\CardOnFileEntity;
-use braspag\Entities\CryptoCurrencyEntity;
-use braspag\Requests\CreditCardRequest;
-use braspag\Clients\Braspag\Factories\FullTransactionFactory;
-use braspag\Clients\Braspag\Factories\SimpleTransactionFactory;
-use braspag\Clients\Braspag\Factories\AuthenticatedTransactionFactory;
-use braspag\ValidationRules\CreditCard\ValidationRules;
+use Braspag\Entities\CustomerEntity;
+use Braspag\Entities\AddressEntity;
+use Braspag\Entities\CreditCardEntity;
+use Braspag\Entities\PaymentEntity;
+use Braspag\Entities\CardOnFileEntity;
+use Braspag\Entities\CryptoCurrencyEntity;
+use Braspag\Requests\CreditCardRequest;
+use Braspag\Clients\Braspag\Factories\FullTransactionFactory;
+use Braspag\Clients\Braspag\Factories\SimpleTransactionFactory;
+use Braspag\Clients\Braspag\Factories\AuthenticatedTransactionFactory;
+use Braspag\ValidationRules\CreditCard\ValidationRules;
 use Rakit\Validation\Validator;
 
-class CreditCardTransaction
+class CreditCardTransactionold
 {
     const SIMPLE_TRANSACTION = 1;
     const COMPLETE_TRANSACTION= 2;
     const AUTHENTICATED_TRANSACTION = 3;
 
-    public function index(CreditCardRequest 
+    public function index(CreditCardRequest $creditCardRequest, $request = null
     )
     {
         $dataArray = json_decode($request, true);

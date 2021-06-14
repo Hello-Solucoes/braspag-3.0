@@ -2,7 +2,7 @@
 
 namespace braspag;
 
-use braspag\Requests\CreditCardRequest;
+use Braspag\Requests\CreditCardRequest;
 
 class CreditCardTransaction 
 {

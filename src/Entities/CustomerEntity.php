@@ -1,9 +1,9 @@
 <?php
 
 
-namespace braspag\Entities;
+namespace Braspag\Entities;
 
-use braspag\Entities\AddressEntity;
+use Braspag\Entities\AddressEntity;
 
 class CustomerEntity
 {

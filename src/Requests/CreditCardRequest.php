@@ -1,7 +1,7 @@
 <?php
 
 
-namespace braspag\Requests;
+namespace Braspag\Requests;
 
 use braspag\Entities\CustomerEntity;
 use braspag\Entities\PaymentEntity;

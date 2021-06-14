@@ -1,6 +1,6 @@
 <?php 
 
-namespace braspag\Constants;
+namespace Braspag\Constants;
 
 class TypeTransactionContants 
 {
