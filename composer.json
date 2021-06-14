@@ -1,0 +1,21 @@
+{
+    "name": "hello/braspag-3.0",
+    "description": "This is a channel manager to deal with transaction of credit card",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucas Goiana Malicia",
+            "email": "lucas@hellosolucoes.com.br"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.5",
+        "rakit/validation": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "braspag\\": "src"
+        }
+    }
+}
