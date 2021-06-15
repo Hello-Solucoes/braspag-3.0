@@ -5,9 +5,13 @@ namespace Braspag\Entities;
 class CredentialsEntity
 {
     private $code;
+
     private $key;
+
     private $password;
+
     private $userName;
+
     private $signature;
 
     /**

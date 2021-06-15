@@ -10,6 +10,7 @@ use Braspag\Entities\CreditCardEntity;
 use Braspag\Entities\CardOnFileEntity;
 use Braspag\Entities\CredentialsEntity;
 use Braspag\Entities\ExtraDataCollectionEntity;
+use Braspag\Entities\MerchantOrderEntity;
 use Braspag\CreditCardTransaction;
 
 
@@ -88,13 +89,13 @@ $paymentEntity->setProvider("Lucas Goiana")
     ->setCredentials($credentials)
     ->setExtraDataCollection($extraDataCollection);
 
+$merchantOrderId = new MerchantOrderEntity;
+$merchantOrderId->setMerchantOrderId('2017051001');
+
 $transaction = new CreditCardRequest;
-$transaction->setMerchantOrderId(rand(0,1000))
-    ->setCustomer($costumerEntity)
-    ->setPayment($paymentEntity);
-
-
-
+$transaction->setMerchantOrderIdEntity($merchantOrderId)
+    ->setCustomerEntity($costumerEntity)
+    ->setPaymentEntity($paymentEntity);
 
 $make = new CreditCardTransaction;
 $data = $make->make($transaction);

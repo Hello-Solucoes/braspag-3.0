@@ -8,12 +8,19 @@ use Braspag\Entities\AddressEntity;
 class CustomerEntity
 {
     private $name;
+
     private $identity;
+
     private $identityType;
+
     private $email;
+
     private $birthdate;
+
     private $ipAddress;
+
     private $address;
+
     private $deliveryAddress;
 
     /**

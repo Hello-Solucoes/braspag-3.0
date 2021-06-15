@@ -7,6 +7,7 @@ namespace Braspag\Entities;
 class CardOnFileEntity
 {
     private $usage;
+
     private $reason;
 
     /**

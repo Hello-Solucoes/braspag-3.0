@@ -5,6 +5,7 @@ namespace Braspag\Entities;
 class ExtraDataCollectionEntity
 {
     private $name;
+
     private $value;
 
     /**

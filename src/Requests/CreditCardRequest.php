@@ -4,76 +4,78 @@
 namespace Braspag\Requests;
 
 use braspag\Entities\CustomerEntity;
+use Braspag\Entities\MerchantOrderEntity;
 use braspag\Entities\PaymentEntity;
 
 class CreditCardRequest
 {
 
-    private $MerchantOrderId;
+    private $merchantOrderIdEntity;
 
     /**
     *
     **/
-    private $Customer;
+    private $customerEntity;
 
     /**
     *
     */
-    private $Payment;
-
-
-     /**
-     * @return mixed
-     */
-    public function getMerchantOrderId()
-    {
-        return $this->Customer;
-    }
-
-    /**
-     * @param mixed $customerEntity
-     */
-    public function setMerchantOrderId($merchantOrderId) 
-    {
-        $this->MerchantOrderId = $merchantOrderId;
-        return $this;
-    }
-
-
+    private $paymentEntity;
 
     /**
      * @return mixed
      */
-    public function getCustomer()
+    public function getMerchantOrderIdEntity()
     {
-        return $this->Customer;
+        return $this->merchantOrderIdEntity;
     }
 
     /**
-     * @param mixed $customerEntity
+     * @param mixed $merchantOrderIdEntity
      */
-    public function setCustomer(CustomerEntity $customerEntity) 
+    public function setMerchantOrderIdEntity(MerchantOrderEntity $merchantOrderIdEntity)
     {
-        $this->Customer = $customerEntity;
+        $this->merchantOrderIdEntity = $merchantOrderIdEntity;
         return $this;
     }
 
     /**
      * @return mixed
      */
-    public function getPayment()
+    public function getCustomerEntity()
     {
-        return $this->Payment;
+        return $this->customerEntity;
+    }
+
+    /**
+     * @param mixed $customerEntity
+     */
+    public function setCustomerEntity(CustomerEntity $customerEntity)
+    {
+        $this->customerEntity = $customerEntity;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPaymentEntity()
+    {
+        return $this->paymentEntity;
     }
 
     /**
      * @param mixed $paymentEntity
      */
-    public function setPayment(PaymentEntity $paymentEntity)
+    public function setPaymentEntity(PaymentEntity $paymentEntity)
     {
-        $this->Payment = $paymentEntity;
+        $this->paymentEntity = $paymentEntity;
+
         return $this;
     }
+
+
+
 
 
 
