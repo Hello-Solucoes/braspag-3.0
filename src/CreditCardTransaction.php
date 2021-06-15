@@ -1,31 +1,23 @@
 <?php
 
-namespace braspag;
+namespace Braspag;
 
 use Braspag\Requests\CreditCardRequest;
-use Braspag\ValidationRules\CreditCard\ValidationRules;
-use Rakit\Validation\Validator;
+use Braspag\Services\CreditCardTransactionService;
 
 class CreditCardTransaction 
 {
 	
+	private $creditCardTransactionService;
+
 	function __construct()
 	{	
-
+		$this->creditCardTransactionService = new CreditCardTransactionService;
 	}	
 
 	public function make(CreditCardRequest $creditCardRequest)
 	{
-	    $requestArray['Customer'] = $creditCardRequest->getCustomerEntity();
-
-//        $validator = new Validator;
-//        $rules = ValidationRules::makeRules();
-
-//       $validation = $validator->make($creditCardRequest, $rules);
-//        $validation->validate();
-//        print_r($validation);
-//
-		return" transação aprovada";
+	    $creditCardTransaction = $this->creditCardTransactionService->run($creditCardRequest);
 
 	}
 }

@@ -7,12 +7,19 @@ namespace Braspag\Entities;
 class AddressEntity
 {
     private $street;
+
     private $number;
+
     private $complement;
+
     private $zipCode;
+
     private $district;
+
     private $city;
+
     private $state;
+    
     private $country;
 
     /**

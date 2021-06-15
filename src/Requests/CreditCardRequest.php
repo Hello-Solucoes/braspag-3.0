@@ -8,40 +8,70 @@ use braspag\Entities\PaymentEntity;
 
 class CreditCardRequest
 {
-    private $customerEntity;
-    private $paymentEntity;
+
+    private $MerchantOrderId;
 
     /**
+    *
+    **/
+    private $Customer;
+
+    /**
+    *
+    */
+    private $Payment;
+
+
+     /**
      * @return mixed
      */
-    public function getCustomerEntity()
+    public function getMerchantOrderId()
     {
-        return $this->customerEntity;
+        return $this->Customer;
     }
 
     /**
      * @param mixed $customerEntity
      */
-    public function setCustomerEntity(CustomerEntity $customerEntity) 
+    public function setMerchantOrderId($merchantOrderId) 
     {
-        $this->customerEntity = $customerEntity;
+        $this->MerchantOrderId = $merchantOrderId;
+        return $this;
+    }
+
+
+
+    /**
+     * @return mixed
+     */
+    public function getCustomer()
+    {
+        return $this->Customer;
+    }
+
+    /**
+     * @param mixed $customerEntity
+     */
+    public function setCustomer(CustomerEntity $customerEntity) 
+    {
+        $this->Customer = $customerEntity;
         return $this;
     }
 
     /**
      * @return mixed
      */
-    public function getPaymentEntity()
+    public function getPayment()
     {
-        return $this->paymentEntity;
+        return $this->Payment;
     }
 
     /**
      * @param mixed $paymentEntity
      */
-    public function setPaymentEntity(PaymentEntity $paymentEntity)
+    public function setPayment(PaymentEntity $paymentEntity)
     {
-        $this->paymentEntity = $paymentEntity;
+        $this->Payment = $paymentEntity;
         return $this;
     }
 

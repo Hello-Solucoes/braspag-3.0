@@ -89,8 +89,9 @@ $paymentEntity->setProvider("Lucas Goiana")
     ->setExtraDataCollection($extraDataCollection);
 
 $transaction = new CreditCardRequest;
-$transaction->setCustomerEntity($costumerEntity)
-    ->setPaymentEntity($paymentEntity);
+$transaction->setMerchantOrderId(rand(0,1000))
+    ->setCustomer($costumerEntity)
+    ->setPayment($paymentEntity);
 
 
 
