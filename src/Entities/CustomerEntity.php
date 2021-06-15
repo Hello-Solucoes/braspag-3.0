@@ -9,11 +9,13 @@ class CustomerEntity
 {
     private $name;
     private $identity;
+    private $identityType;
     private $email;
     private $birthdate;
+    private $ipAddress;
     private $address;
     private $deliveryAddress;
- 
+
     /**
      * @return mixed
      */
@@ -45,6 +47,23 @@ class CustomerEntity
     public function setIdentity($identity)
     {
         $this->identity = $identity;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdentityType()
+    {
+        return $this->identityType;
+    }
+
+    /**
+     * @param mixed $identityType
+     */
+    public function setIdentityType($identityType)
+    {
+        $this->identityType = $identityType;
         return $this;
     }
 
@@ -85,6 +104,23 @@ class CustomerEntity
     /**
      * @return mixed
      */
+    public function getIpAddress()
+    {
+        return $this->ipAddress;
+    }
+
+    /**
+     * @param mixed $ipAddress
+     */
+    public function setIpAddress($ipAddress)
+    {
+        $this->ipAddress = $ipAddress;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getAddress()
     {
         return $this->address;
@@ -110,11 +146,12 @@ class CustomerEntity
     /**
      * @param mixed $deliveryAddress
      */
-    public function setDeliveryAddress(AddressEntity $deliveryAddress)
+    public function setDeliveryAddress($deliveryAddress)
     {
         $this->deliveryAddress = $deliveryAddress;
         return $this;
     }
+
 
 
 }

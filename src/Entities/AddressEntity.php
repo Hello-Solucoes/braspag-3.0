@@ -63,6 +63,7 @@ class AddressEntity
     public function setComplement($complement)
     {
         $this->complement = $complement;
+        return $this;
     }
 
     /**
@@ -79,6 +80,7 @@ class AddressEntity
     public function setZipCode($zipCode)
     {
         $this->zipCode = $zipCode;
+        return $this;
     }
 
     /**
@@ -95,6 +97,7 @@ class AddressEntity
     public function setDistrict($district)
     {
         $this->district = $district;
+        return $this;
     }
 
     /**
@@ -111,6 +114,7 @@ class AddressEntity
     public function setCity($city)
     {
         $this->city = $city;
+        return $this;
     }
 
     /**
@@ -127,6 +131,7 @@ class AddressEntity
     public function setState($state)
     {
         $this->state = $state;
+        return $this;
     }
 
     /**
@@ -143,6 +148,7 @@ class AddressEntity
     public function setCountry($country)
     {
         $this->country = $country;
+        return $this;
     }
 
 }

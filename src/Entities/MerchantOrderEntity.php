@@ -22,6 +22,7 @@ class MerchantOrderEntity
     public function setMerchantOrderId($merchantOrderId)
     {
         $this->merchantOrderId = $merchantOrderId;
+        return $this;
     }
 
 

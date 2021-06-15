@@ -11,11 +11,9 @@ class CreditCardEntity
     private $expirationDate;
     private $securityCode;
     private $brand;
-    private $cardOnFile;
     private $saveCard;
-    private $paymentAccountReference;
-
-
+    private $alias;
+    private $cardOnFile;
 
     /**
      * @return mixed
@@ -31,6 +29,7 @@ class CreditCardEntity
     public function setCardNumber($cardNumber)
     {
         $this->cardNumber = $cardNumber;
+        return $this;
     }
 
     /**
@@ -47,6 +46,7 @@ class CreditCardEntity
     public function setHolder($holder)
     {
         $this->holder = $holder;
+        return $this;
     }
 
     /**
@@ -63,6 +63,7 @@ class CreditCardEntity
     public function setExpirationDate($expirationDate)
     {
         $this->expirationDate = $expirationDate;
+        return $this;
     }
 
     /**
@@ -79,6 +80,7 @@ class CreditCardEntity
     public function setSecurityCode($securityCode)
     {
         $this->securityCode = $securityCode;
+        return $this;
     }
 
     /**
@@ -95,6 +97,41 @@ class CreditCardEntity
     public function setBrand($brand)
     {
         $this->brand = $brand;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSaveCard()
+    {
+        return $this->saveCard;
+    }
+
+    /**
+     * @param mixed $saveCard
+     */
+    public function setSaveCard($saveCard)
+    {
+        $this->saveCard = $saveCard;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAlias()
+    {
+        return $this->alias;
+    }
+
+    /**
+     * @param mixed $alias
+     */
+    public function setAlias($alias)
+    {
+        $this->alias = $alias;
+        return $this;
     }
 
     /**
@@ -111,37 +148,7 @@ class CreditCardEntity
     public function setCardOnFile($cardOnFile)
     {
         $this->cardOnFile = $cardOnFile;
-    }
-    /**
-     * @return mixed
-     */
-    public function getSaveCard()
-    {
-        return $this->saveCard;
-    }
-
-    /**
-     * @param mixed $saveCard
-     */
-    public function setSaveCard($saveCard)
-    {
-        $this->saveCard = $saveCard;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPaymentAccountReference()
-    {
-        return $this->paymentAccountReference;
-    }
-
-    /**
-     * @param mixed $paymentAccountReference
-     */
-    public function setPaymentAccountReference($paymentAccountReference)
-    {
-        $this->paymentAccountReference = $paymentAccountReference;
+        return $this;
     }
 
 }

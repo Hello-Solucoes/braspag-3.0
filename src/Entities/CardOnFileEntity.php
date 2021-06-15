@@ -15,6 +15,7 @@ class CardOnFileEntity
     public function getUsage()
     {
         return $this->usage;
+
     }
 
     /**
@@ -23,6 +24,7 @@ class CardOnFileEntity
     public function setUsage($usage)
     {
         $this->usage = $usage;
+        return $this;
 
     }
 
@@ -32,6 +34,7 @@ class CardOnFileEntity
     public function getReason()
     {
         return $this->reason;
+
     }
 
     /**
@@ -40,6 +43,7 @@ class CardOnFileEntity
     public function setReason($reason)
     {
         $this->reason = $reason;
+        return $this;
     }
 
 }

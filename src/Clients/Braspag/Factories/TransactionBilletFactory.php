@@ -1,9 +1,9 @@
 <?php
 
 
-namespace braspag\Clients\BrasPag\Factories;
+namespace Braspag\Clients\Braspag\Factories;
 
-use braspag\Requests\BilletRequest;
+use Braspag\Requests\BilletRequest;
 use stdClass;
 
 
