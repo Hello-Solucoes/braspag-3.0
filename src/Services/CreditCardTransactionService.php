@@ -17,10 +17,25 @@ class CreditCardTransactionService
 
         $client = new BraspagClient();
 		$response = $client->post('/v2/sales',$request, [], []);
-		print_r($response);
 
-
+		return $response;
 	}
+
+    public function consult($paymentId)
+    {
+        $client = new BraspagClient();
+        $response = $client->get('/v2/sales/'.$paymentId, [], []);
+
+        return $response;
+    }
+
+	public function cancellation($paymentId, $amount)
+    {
+        $client = new BraspagClient();
+        $response = $client->put('/v2/sales/'.$paymentId.'/void?amount='.$amount, [], []);
+
+        return $response;
+    }
 }
 
 

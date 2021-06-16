@@ -97,8 +97,14 @@ $transaction->setMerchantOrderIdEntity($merchantOrderId)
     ->setCustomerEntity($costumerEntity)
     ->setPaymentEntity($paymentEntity);
 
-$make = new CreditCardTransaction;
-$data = $make->make($transaction);
+$creditCardTransaction = new CreditCardTransaction;
+$data = $creditCardTransaction->make($transaction);
+
+print_r($creditCardTransaction->makeConsult($data->Payment->PaymentId));
+
+print_r($creditCardTransaction->makeCancellation($data->Payment->PaymentId, $data->Payment->Amount));
+
+
 
 
 

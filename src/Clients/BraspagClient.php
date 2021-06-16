@@ -69,10 +69,18 @@ class BraspagClient
 		return $this->__doRequest('POST', $endpoint, $request, $headers, $options);
 	}
 
-	public function get()
+	public function get($endpoint, array $headers)
 	{
-
+        $this->httpClient = new Client([
+            'base_uri' => self::BASE_URI_HOMOLOG_CONSULT
+        ]);
+        return $this->__doRequest('GET', $endpoint, '', $headers, '');
 	}
+
+    public function put($endpoint, array $headers)
+    {
+        return $this->__doRequest('PUT', $endpoint, '', $headers, '');
+    }
 
 	public function patch()
 	{

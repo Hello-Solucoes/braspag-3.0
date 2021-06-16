@@ -18,7 +18,19 @@ class CreditCardTransaction
 	public function make(CreditCardRequest $creditCardRequest)
 	{
 	    $creditCardTransaction = $this->creditCardTransactionService->run($creditCardRequest);
-
+        return $creditCardTransaction;
 	}
+
+    public function makeConsult($paymentId)
+    {
+        $creditCardTransaction = $this->creditCardTransactionService->consult($paymentId);
+        return $creditCardTransaction;
+    }
+
+    public function makeCancellation($paymentId, $amount)
+    {
+        $creditCardTransaction = $this->creditCardTransactionService->cancellation($paymentId, $amount);
+        return $creditCardTransaction;
+    }
 }
 
