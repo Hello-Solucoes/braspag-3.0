@@ -3,9 +3,9 @@
 
 namespace Braspag\Requests;
 
-use braspag\Entities\CustomerEntity;
+use Braspag\Entities\CustomerEntity;
 use Braspag\Entities\MerchantOrderEntity;
-use braspag\Entities\PaymentEntity;
+use Braspag\Entities\PaymentEntity;
 
 class CreditCardRequest
 {

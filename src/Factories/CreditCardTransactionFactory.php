@@ -31,7 +31,8 @@ class CreditCardTransactionFactory
     private function makeMerchantOrderId($merchandIdObj)
     {
         $merchandOrderId = new StdClass();
-        $merchandOrderId->MerchantOrderId = $merchandIdObj->getMerchantOrderId();
+        $merchandOrderId = $merchandIdObj->getMerchantOrderId();
+        return $merchandOrderId;
     }
 
     private function makeCustomer($customerObj)
@@ -59,10 +60,10 @@ class CreditCardTransactionFactory
         $address->Number = $addressObj->getNumber();
         $address->Complement = $addressObj->getComplement();
         $address->ZipCode = $addressObj->getZipCode();
-        $address->District = $addressObj->getDistrict();
         $address->City = $addressObj->getCity();
         $address->State = $addressObj->getState();
         $address->Country = $addressObj->getCountry();
+        $address->District = $addressObj->getDistrict();
 
         return $address;
     }
@@ -75,10 +76,10 @@ class CreditCardTransactionFactory
         $deliveryAddress->Number = $deliveryAddressObj->getNumber();
         $deliveryAddress->Complement = $deliveryAddressObj->getComplement();
         $deliveryAddress->ZipCode = $deliveryAddressObj->getZipCode();
-        $deliveryAddress->District = $deliveryAddressObj->getDistrict();
         $deliveryAddress->City = $deliveryAddressObj->getCity();
         $deliveryAddress->State = $deliveryAddressObj->getState();
         $deliveryAddress->Country = $deliveryAddressObj->getCountry();
+        $deliveryAddress->District = $deliveryAddressObj->getDistrict();
 
         return $deliveryAddress;
 
@@ -88,20 +89,20 @@ class CreditCardTransactionFactory
     {
         $payment = new StdClass;
         $payment->Provider = $paymentObj->getProvider();
-        $payment->Amount = $paymentObj->getAmount();
         $payment->Type = $paymentObj->getType();
+        $payment->Amount = $paymentObj->getAmount();
         $payment->Currency = $paymentObj->getCurrency();
         $payment->Country = $paymentObj->getCountry();
         $payment->Installments = $paymentObj->getInstallments();
         $payment->Interest = $paymentObj->getInterest();
         $payment->Capture = $paymentObj->getCapture();
-        $payment->Recurrent = $paymentObj->getRecurrent();
         $payment->Authenticate = $paymentObj->getAuthenticate() ;
+        $payment->Recurrent = $paymentObj->getRecurrent();
         $payment->SoftDescriptor = $paymentObj->getSoftDescriptor();
         $payment->DoSplit = $paymentObj->getDoSplit();
         $payment->CreditCard = $this->makeCreditCard($paymentObj->getCreditCard());
         $payment->Credentials = $this->makeCredentials($paymentObj->getCredentials());
-        $payment->ExtraDataCollection = $this->makeExtraDataCollection($paymentObj->getExtraDataCollection());
+        $payment->ExtraDataCollection[] = $this->makeExtraDataCollection($paymentObj->getExtraDataCollection());
 
         return $payment;
 
@@ -117,8 +118,9 @@ class CreditCardTransactionFactory
         $creditCard->ExpirationDate = $creditCardObj->getExpirationDate();
         $creditCard->SecurityCode = $creditCardObj->getSecurityCode();
         $creditCard->Brand = $creditCardObj->getBrand();
+        $creditCard->SaveCard = $creditCardObj->getSaveCard();
         $creditCard->Alias = $creditCardObj->getAlias();
-        $creditCard->CardOnFile = $creditCardObj->getCardOnFile();
+        $creditCard->CardOnFile = $this->makeCardOnFile($creditCardObj->getCardOnFile());
 
 
 

@@ -22,8 +22,8 @@ $address->setStreet('Avenida Ipiranga')
     ->setComplement('sala 4')
     ->setZipCode("03589070")
     ->setCity("São Paulo")
-    ->setState('São Paulo')
-    ->setCountry('Brasil')
+    ->setState('SP')
+    ->setCountry('BRA')
     ->setDistrict('República');
 
 $deliveryAddress->setStreet('Avenida Ipiranga')
@@ -31,8 +31,8 @@ $deliveryAddress->setStreet('Avenida Ipiranga')
     ->setComplement('sala 4')
     ->setZipCode("03589070")
     ->setCity("São Paulo")
-    ->setState('São Paulo')
-    ->setCountry('Brasil')
+    ->setState('SP')
+    ->setCountry('BRA')
     ->setDistrict('República');
 
 $costumerEntity = new CustomerEntity;
@@ -47,12 +47,12 @@ $costumerEntity->setName('Ewerson Carvalho')
 
 
 $extraDataCollection = new ExtraDataCollectionEntity;
-$extraDataCollection->setName('NomedoCampo')
-    ->setValue("ValordoCampo");
+$extraDataCollection->setName('NomeDoCampo')
+    ->setValue("ValorDoCampo");
 
 
 $credentials = new CredentialsEntity;
-$credentials->setCode("99999999")
+$credentials->setCode("9999999")
     ->setKey('D8888888')
     ->setPassword('LOJA9999999')
     ->setUsername('#Braspag2018@NOMEDALOJA#')
@@ -64,7 +64,7 @@ $cardOnFile->setUsage('Used')
 
 $creditCard = new CreditCardEntity;
 $creditCard->setCardNumber('4551870000000181')
-    ->setHolder("Lucas Goiana")
+    ->setHolder("Simulado")
     ->setExpirationDate("12/2021")
     ->setSecurityCode('123')
     ->setBrand('Visa')
@@ -73,12 +73,12 @@ $creditCard->setCardNumber('4551870000000181')
     ->setCardOnFile($cardOnFile);
 
 $paymentEntity = new PaymentEntity;
-$paymentEntity->setProvider("Lucas Goiana")
+$paymentEntity->setProvider("Simulado")
     ->setType('CreditCard')
     ->setAmount("10000")
     ->setCurrency("BRL")
     ->setCountry('BRA')
-    ->setInstallments('1')
+    ->setInstallments(1)
     ->setInterest("ByMerchant")
     ->setCapture(true)
     ->setAuthenticate(false)
@@ -100,9 +100,6 @@ $transaction->setMerchantOrderIdEntity($merchantOrderId)
 $make = new CreditCardTransaction;
 $data = $make->make($transaction);
 
-echo '<pre>';
-print_r($data);
-echo '</pre>';
 
 
 

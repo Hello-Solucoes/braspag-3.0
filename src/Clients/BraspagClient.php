@@ -47,18 +47,17 @@ class BraspagClient
 
 	public function __doRequest($method, $endpoint, $request, $headers, $options)
 	{
+
 		try {
 			$response = $this->httpClient->{$method}($endpoint, [
 				'headers' => array_merge($headers, $this->headers()),
 				'json' => $request
-			]);	
-
-
+			]);
 			return json_decode($response->getBody());
 					
 		} catch (\GuzzleHttp\Exception\ClientException $e ) {
 			echo '<pre> =============================================================='.PHP_EOL;
-			print_r(json_decode($e->getMessage()));
+			print_r($e->getMessage());
 			echo '</pre> =============================================================='.PHP_EOL;
 		}
 		

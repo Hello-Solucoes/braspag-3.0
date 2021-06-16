@@ -13,10 +13,12 @@ class CreditCardTransactionService
 	public function run(CreditCardRequest $creditCardRequest)
 	{
         $creditCardFactory = new CreditCardTransactionFactory($creditCardRequest);
-        $request = json_encode($creditCardFactory->make());
-        print_r($request);
+        $request = (array) $creditCardFactory->make();
+
         $client = new BraspagClient();
-		$client->post('/v2/sales',$request, [], []);
+		$response = $client->post('/v2/sales',$request, [], []);
+		print_r($response);
+
 
 	}
 }

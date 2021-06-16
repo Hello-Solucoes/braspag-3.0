@@ -153,7 +153,7 @@ class CustomerEntity
     /**
      * @param mixed $deliveryAddress
      */
-    public function setDeliveryAddress($deliveryAddress)
+    public function setDeliveryAddress(AddressEntity $deliveryAddress)
     {
         $this->deliveryAddress = $deliveryAddress;
         return $this;
