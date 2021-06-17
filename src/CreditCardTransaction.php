@@ -12,6 +12,10 @@ class CreditCardTransaction
 
 	function __construct( array $config )
 	{
+        $this->config = new Config($config['production']);
+        print_r($this->config->currentEnv());
+        exit();
+
 
 		$this->creditCardTransactionService = new CreditCardTransactionService($config);
 

@@ -6,15 +6,17 @@ namespace Braspag\Services;
 use Braspag\Requests\CreditCardRequest;
 use Braspag\Factories\CreditCardTransactionFactory;
 use Braspag\Clients\BraspagClient;
+use Braspag\Config;
 
 class CreditCardTransactionService
 {
     private $config;
 
-    function __construct( array $config )
+    function __construct(Config $config)
     {
 
         $this->config = $config;
+        $client = new BraspagClient($this->config);
 
     }
 
@@ -23,7 +25,7 @@ class CreditCardTransactionService
         $creditCardFactory = new CreditCardTransactionFactory($creditCardRequest);
         $request = (array) $creditCardFactory->make();
 
-        $client = new BraspagClient($this->config);
+   
 
 		$response = $client->post('/v2/sales',$request, [], []);
 

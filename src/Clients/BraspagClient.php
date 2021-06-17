@@ -54,10 +54,16 @@ class BraspagClient
 	{
 
 		try {
-			$response = $this->httpClient->{$method}($endpoint, [
-				'headers' => array_merge($headers, $this->headers()),
-				'json' => $request
-			]);
+
+			$headers = array_merge($headers, $this->headers());
+
+
+			if($mthod == 'PUT')
+				$body = ['query'=> $request];
+			else 
+				$body = ['json'=> $request];
+
+			$response = $this->httpClient->{$method}($endpoint, $headers, $body);
 			return json_decode($response->getBody());
 					
 		} catch (\GuzzleHttp\Exception\ClientException $e ) {
