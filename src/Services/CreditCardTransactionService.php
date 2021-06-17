@@ -10,13 +10,21 @@ use Braspag\Config;
 
 class CreditCardTransactionService
 {
-    private $config;
+
+    /**
+     * @var BraspagClient
+     */
+
+    private $client;
+
+    /**
+     * @param Config $config
+     */
 
     function __construct(Config $config)
     {
 
-        $this->config = $config;
-        $client = new BraspagClient($this->config);
+        $this->client = new BraspagClient($config);
 
     }
 
@@ -25,25 +33,23 @@ class CreditCardTransactionService
         $creditCardFactory = new CreditCardTransactionFactory($creditCardRequest);
         $request = (array) $creditCardFactory->make();
 
-   
-
-		$response = $client->post('/v2/sales',$request, [], []);
+		$response = $this->client->post('/v2/sales',$request, [], []);
 
 		return $response;
 	}
 
     public function consult($paymentId)
     {
-        $client = new BraspagClient();
-        $response = $client->get('/v2/sales/'.$paymentId, [], []);
+
+        $response = $this->client->get('/v2/sales/'.$paymentId, [], []);
 
         return $response;
     }
 
 	public function cancellation($paymentId, $amount)
     {
-        $client = new BraspagClient();
-        $response = $client->put('/v2/sales/'.$paymentId.'/void?amount='.$amount, [], []);
+
+        $response = $this->client->put('/v2/sales/'.$paymentId.'/void?', $amount, [], []);
 
         return $response;
     }

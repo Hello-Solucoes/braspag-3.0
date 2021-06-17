@@ -17,6 +17,7 @@ class Config
     function __construct($production)
     {
     	$this->production = $production;
+
     }
 
     //
@@ -38,15 +39,24 @@ class Config
 
     private function prodConsult()
     {
-    	return self::BASE_URI_HOMOLOG_CONSULT;
+    	return self::BASE_URI_PROD_CONSULT;
     }
 
     public function currentEnv()
     {
-    	if($this->production)
-    		return $this->prodTransaction();
-    	else 
-    		return $this->testTransaction();
+
+    	if($this->production['production'] == true && $this->production['consult'] == true )
+    		return $this->prodConsult();
+
+        if($this->production['production'] == true && $this->production['consult'] == false )
+            return $this->prodTransaction();
+
+        if($this->production['production'] == false && $this->production['consult'] == true )
+            return $this->testConsult();
+
+        if($this->production['production'] == false && $this->production['consult'] == false )
+            return $this->testTransaction();
+
     }
 
 

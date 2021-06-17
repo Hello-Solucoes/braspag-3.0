@@ -26,16 +26,12 @@ class BraspagClient
     /**
      *
      * Constructor method
-     * @param array $config
+     * @param Config $config
      */
-	function __construct( array $config )
+	function __construct(Config $config )
 	{
-
-
-	    $this->config = $config ?? $this->config['production']  = 0;
-
 		$this->httpClient = new Client([
-			'base_uri' => ($this->config['production'] == true)? Config::BASE_URI_HOMOLOG : Config::BASE_URI_PROD
+			'base_uri' => $config->currentEnv()
 		]);
 
 	}
@@ -49,21 +45,42 @@ class BraspagClient
 		];
 	}
 
+    private function bodies( $method, $headers, $request )
+    {
+            if ($method == 'POST'){
 
-	public function __doRequest($method, $endpoint, $request, $headers, $options)
+                return [
+                    'headers' => array_merge($headers, $this->headers()),
+                    'json' => $request
+                ];
+
+            }
+
+            if ($method == 'GET') {
+                return [
+                    'headers' => array_merge($headers, $this->headers())
+                ];
+            }
+
+            if ($method == 'PUT') {
+                return [
+                    'headers' => array_merge($headers, $this->headers()),
+                    'query' => $request
+                ];
+            }
+
+
+    }
+
+
+    public function __doRequest($method, $endpoint, $request, $headers, $options)
 	{
 
 		try {
 
-			$headers = array_merge($headers, $this->headers());
+		    $body = $this->bodies($method, $headers, $request);
 
-
-			if($mthod == 'PUT')
-				$body = ['query'=> $request];
-			else 
-				$body = ['json'=> $request];
-
-			$response = $this->httpClient->{$method}($endpoint, $headers, $body);
+            $response = $this->httpClient->{$method}($endpoint, $body);
 			return json_decode($response->getBody());
 					
 		} catch (\GuzzleHttp\Exception\ClientException $e ) {
@@ -82,15 +99,12 @@ class BraspagClient
 
 	public function get($endpoint, array $headers)
 	{
-        $this->httpClient = new Client([
-            'base_uri' => ($this->config['production'] == false)? Config::BASE_URI_HOMOLOG_CONSULT : Config::BASE_URI_PROD_CONSULT
-        ]);
         return $this->__doRequest('GET', $endpoint, '', $headers, '');
 	}
 
-    public function put($endpoint, array $headers)
+    public function put($endpoint, array $request, array $headers)
     {
-        return $this->__doRequest('PUT', $endpoint, '', $headers, '');
+        return $this->__doRequest('PUT', $endpoint, $request, $headers, '');
     }
 
 	public function patch()

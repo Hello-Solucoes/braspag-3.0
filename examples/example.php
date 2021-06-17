@@ -98,13 +98,16 @@ $transaction->setMerchantOrderIdEntity($merchantOrderId)
     ->setPaymentEntity($paymentEntity);
 
 $creditCardTransaction = new CreditCardTransaction([
-    'production'=> false
+    'production'=> false,
+    'consult'=> false
 ]);
-$data = $creditCardTransaction->make($transaction);
 
-print_r($creditCardTransaction->makeConsult($data->Payment->PaymentId));
+//$data = $creditCardTransaction->make($transaction);
 
-print_r($creditCardTransaction->makeCancellation($data->Payment->PaymentId, $data->Payment->Amount));
+
+//print_r($creditCardTransaction->makeConsult("3e0dda80-2e93-4023-82c3-f2c023bb402d"));
+
+print_r($creditCardTransaction->makeCancellation("3e0dda80-2e93-4023-82c3-f2c023bb402d", ["amount" => "10000"]));
 
 
 
