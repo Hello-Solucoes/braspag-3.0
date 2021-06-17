@@ -10,9 +10,11 @@ class CreditCardTransaction
 	
 	private $creditCardTransactionService;
 
-	function __construct()
-	{	
-		$this->creditCardTransactionService = new CreditCardTransactionService;
+	function __construct( array $config )
+	{
+
+		$this->creditCardTransactionService = new CreditCardTransactionService($config);
+
 	}	
 
 	public function make(CreditCardRequest $creditCardRequest)

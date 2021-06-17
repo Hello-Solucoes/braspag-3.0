@@ -2,6 +2,7 @@
 
 namespace Braspag\Clients; 
 
+use Braspag\Config;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7;
@@ -9,13 +10,7 @@ use GuzzleHttp\Psr7;
 class BraspagClient
 {
 
-	CONST BASE_URI_HOMOLOG = "https://apisandbox.braspag.com.br";
 
-	CONST BASE_URI_HOMOLOG_CONSULT = 'https://apiquerysandbox.braspag.com.br/';
-
-	CONST BASE_URI_PROD = "https://api.braspag.com.br/";
-
-	CONST BASE_URI_PROD_CONSULT = 'https://apiquery.braspag.com.br/';
 
 
     /**
@@ -24,15 +19,25 @@ class BraspagClient
 	private $httpClient;
 
     /**
+     * @var
+     */
+	private $config;
+
+    /**
      *
      * Constructor method
      * @param array $config
      */
-	function __construct()
+	function __construct( array $config )
 	{
+
+
+	    $this->config = $config ?? $this->config['production']  = 0;
+
 		$this->httpClient = new Client([
-			'base_uri' => self::BASE_URI_HOMOLOG
+			'base_uri' => ($this->config['production'] == true)? Config::BASE_URI_HOMOLOG : Config::BASE_URI_PROD
 		]);
+
 	}
 
 	private function headers()
@@ -72,7 +77,7 @@ class BraspagClient
 	public function get($endpoint, array $headers)
 	{
         $this->httpClient = new Client([
-            'base_uri' => self::BASE_URI_HOMOLOG_CONSULT
+            'base_uri' => ($this->config['production'] == false)? Config::BASE_URI_HOMOLOG_CONSULT : Config::BASE_URI_PROD_CONSULT
         ]);
         return $this->__doRequest('GET', $endpoint, '', $headers, '');
 	}

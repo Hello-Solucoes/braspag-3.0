@@ -97,7 +97,9 @@ $transaction->setMerchantOrderIdEntity($merchantOrderId)
     ->setCustomerEntity($costumerEntity)
     ->setPaymentEntity($paymentEntity);
 
-$creditCardTransaction = new CreditCardTransaction;
+$creditCardTransaction = new CreditCardTransaction([
+    'production'=> false
+]);
 $data = $creditCardTransaction->make($transaction);
 
 print_r($creditCardTransaction->makeConsult($data->Payment->PaymentId));

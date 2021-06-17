@@ -9,13 +9,22 @@ use Braspag\Clients\BraspagClient;
 
 class CreditCardTransactionService
 {
+    private $config;
+
+    function __construct( array $config )
+    {
+
+        $this->config = $config;
+
+    }
 
 	public function run(CreditCardRequest $creditCardRequest)
 	{
         $creditCardFactory = new CreditCardTransactionFactory($creditCardRequest);
         $request = (array) $creditCardFactory->make();
 
-        $client = new BraspagClient();
+        $client = new BraspagClient($this->config);
+
 		$response = $client->post('/v2/sales',$request, [], []);
 
 		return $response;
