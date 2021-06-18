@@ -6,6 +6,9 @@ namespace Braspag\Entities;
 
 class MerchantOrderEntity
 {
+    /**
+     * @var $merchantOrderId
+     */
     private $merchantOrderId;
 
     /**

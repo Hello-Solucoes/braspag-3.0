@@ -7,9 +7,19 @@ use \StdClass;
 
 class CreditCardTransactionFactory
 {
+    /**
+     * @var CreditCardRequest
+     */
     private $creditCardRequest;
+
+    /**
+     * @var StdClass
+     */
     private $std;
 
+    /**
+     * @param CreditCardRequest $creditCardRequest
+     */
     function __construct(CreditCardRequest $creditCardRequest)
     {
 
@@ -17,6 +27,9 @@ class CreditCardTransactionFactory
         $this->std = new StdClass();
     }
 
+    /**
+     * @return StdClass
+     */
     public function make()
     {
         $std = new StdClass();
@@ -28,6 +41,10 @@ class CreditCardTransactionFactory
         return $std;
     }
 
+    /**
+     * @param $merchandIdObj
+     * @return mixed
+     */
     private function makeMerchantOrderId($merchandIdObj)
     {
         $merchandOrderId = new StdClass();
@@ -35,6 +52,10 @@ class CreditCardTransactionFactory
         return $merchandOrderId;
     }
 
+    /**
+     * @param $customerObj
+     * @return StdClass
+     */
     private function makeCustomer($customerObj)
     {
         $customer = new StdClass();
@@ -52,6 +73,10 @@ class CreditCardTransactionFactory
 
     }
 
+    /**
+     * @param $addressObj
+     * @return StdClass
+     */
     private function makeAddress($addressObj)
     {
         $address = new StdClass;
@@ -68,6 +93,10 @@ class CreditCardTransactionFactory
         return $address;
     }
 
+    /**
+     * @param $deliveryAddressObj
+     * @return StdClass
+     */
     private function makeDeliveryAddress($deliveryAddressObj){
 
         $deliveryAddress = new StdClass;
@@ -84,6 +113,11 @@ class CreditCardTransactionFactory
         return $deliveryAddress;
 
     }
+
+    /**
+     * @param $paymentObj
+     * @return StdClass
+     */
 
     private function makePayment($paymentObj)
     {
@@ -108,6 +142,10 @@ class CreditCardTransactionFactory
 
     }
 
+    /**
+     * @param $creditCardObj
+     * @return StdClass
+     */
     private function makeCreditCard($creditCardObj)
     {
         $creditCard = new StdClass;
@@ -127,6 +165,10 @@ class CreditCardTransactionFactory
         return $creditCard;
     }
 
+    /**
+     * @param $cardOnFileobj
+     * @return StdClass
+     */
     private function makeCardOnFile($cardOnFileobj)
     {
         $cardOnFile = new StdClass;
@@ -138,6 +180,10 @@ class CreditCardTransactionFactory
 
     }
 
+    /**
+     * @param $credentialObj
+     * @return StdClass
+     */
     private function makeCredentials($credentialObj)
     {
         $credentials = new StdClass;
@@ -152,6 +198,10 @@ class CreditCardTransactionFactory
 
     }
 
+    /**
+     * @param $extraDataCollectionObj
+     * @return StdClass
+     */
     private function makeExtraDataCollection($extraDataCollectionObj)
     {
         $extraDataCollection = new StdClass;

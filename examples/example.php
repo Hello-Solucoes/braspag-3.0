@@ -102,12 +102,12 @@ $creditCardTransaction = new CreditCardTransaction([
     'consult'=> false
 ]);
 
-//$data = $creditCardTransaction->make($transaction);
+$data = $creditCardTransaction->make($transaction);
+//print_r($data);
 
+//print_r($creditCardTransaction->makeConsult("ce38bbc1-4aa1-44dc-a142-2e4b330f4e93"));
 
-//print_r($creditCardTransaction->makeConsult("3e0dda80-2e93-4023-82c3-f2c023bb402d"));
-
-print_r($creditCardTransaction->makeCancellation("3e0dda80-2e93-4023-82c3-f2c023bb402d", ["amount" => "10000"]));
+print_r($creditCardTransaction->makeCancellation("ce38bbc1-4aa1-44dc-a142-2e4b330f4e93", ["amount" => "10000"]));
 
 
 

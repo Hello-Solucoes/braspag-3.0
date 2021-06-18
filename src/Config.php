@@ -12,36 +12,55 @@ class Config
 
     CONST BASE_URI_PROD_CONSULT = 'https://apiquery.braspag.com.br/';
 
+    /**
+     * @var $production
+     */
     private $production;
 
+    /**
+     * @param $production
+     */
     function __construct($production)
     {
     	$this->production = $production;
 
     }
 
-    //
+    /**
+     * @return string
+     */
     private function testTransaction()
     {
     	return self::BASE_URI_HOMOLOG;
     }
 
+    /**
+     * @return string
+     */
     private function testConsult()
     {
     	return self::BASE_URI_HOMOLOG_CONSULT;
     }
 
-
+    /**
+     * @return string
+     */
    	private function prodTransaction()
     {
     	return self::BASE_URI_HOMOLOG;
     }
 
+    /**
+     * @return string
+     */
     private function prodConsult()
     {
     	return self::BASE_URI_PROD_CONSULT;
     }
 
+    /**
+     * @return string|void
+     */
     public function currentEnv()
     {
 

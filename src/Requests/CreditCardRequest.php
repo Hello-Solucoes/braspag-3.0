@@ -10,16 +10,20 @@ use Braspag\Entities\PaymentEntity;
 class CreditCardRequest
 {
 
+    /**
+     * @var $merchantOrderIdEntity
+     */
     private $merchantOrderIdEntity;
 
+
     /**
-    *
-    **/
+     * @var $customerEntity
+     */
     private $customerEntity;
 
     /**
-    *
-    */
+     * @var $paymentEntity
+     */
     private $paymentEntity;
 
     /**
@@ -31,7 +35,8 @@ class CreditCardRequest
     }
 
     /**
-     * @param mixed $merchantOrderIdEntity
+     * @param MerchantOrderEntity $merchantOrderIdEntity
+     * @return $this
      */
     public function setMerchantOrderIdEntity(MerchantOrderEntity $merchantOrderIdEntity)
     {
@@ -48,7 +53,8 @@ class CreditCardRequest
     }
 
     /**
-     * @param mixed $customerEntity
+     * @param CustomerEntity $customerEntity
+     * @return $this
      */
     public function setCustomerEntity(CustomerEntity $customerEntity)
     {
@@ -65,7 +71,8 @@ class CreditCardRequest
     }
 
     /**
-     * @param mixed $paymentEntity
+     * @param PaymentEntity $paymentEntity
+     * @return $this
      */
     public function setPaymentEntity(PaymentEntity $paymentEntity)
     {

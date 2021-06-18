@@ -6,20 +6,44 @@ namespace Braspag\Entities;
 
 class AddressEntity
 {
+    /**
+     * @var $street
+     */
     private $street;
 
+    /**
+     * @var $number
+     */
     private $number;
 
+    /**
+     * @var $complement
+     */
     private $complement;
 
+    /**
+     * @var $zipCode
+     */
     private $zipCode;
 
+    /**
+     * @var $district
+     */
     private $district;
 
+    /**
+     * @var $city
+     */
     private $city;
 
+    /**
+     * @var $state
+     */
     private $state;
-    
+
+    /**
+     * @var $country
+     */
     private $country;
 
     /**

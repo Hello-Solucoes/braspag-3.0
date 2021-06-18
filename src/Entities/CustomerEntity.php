@@ -7,20 +7,44 @@ use Braspag\Entities\AddressEntity;
 
 class CustomerEntity
 {
+    /**
+     * @var $name
+     */
     private $name;
 
+    /**
+     * @var $identity
+     */
     private $identity;
 
+    /**
+     * @var $identityType
+     */
     private $identityType;
 
+    /**
+     * @var $email
+     */
     private $email;
 
+    /**
+     * @var $birthdate
+     */
     private $birthdate;
 
+    /**
+     * @var $ipAddress
+     */
     private $ipAddress;
 
+    /**
+     * @var $address
+     */
     private $address;
 
+    /**
+     * @var $deliveryAddress
+     */
     private $deliveryAddress;
 
     /**

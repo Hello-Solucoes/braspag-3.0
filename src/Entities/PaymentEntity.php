@@ -8,34 +8,79 @@ use Braspag\Entities\CredentialsEntity;
 
 class PaymentEntity
 {
+    /**
+     * @var $provider
+     */
     private  $provider;
 
+    /**
+     * @var $amount
+     */
     private  $amount;
 
+    /**
+     * @var $type
+     */
     private  $type;
 
+    /**
+     * @var $currency
+     */
     private  $currency;
 
+    /**
+     * @var $country
+     */
     private  $country;
 
+    /**
+     * @var $installments
+     */
     private  $installments;
 
+    /**
+     * @var $interest
+     */
     private  $interest;
 
+    /**
+     * @var $capture
+     */
     private  $capture;
 
+    /**
+     * @var $authenticate
+     */
     private  $authenticate;
 
+    /**
+     * @var $recurrent
+     */
     private  $recurrent;
 
+    /**
+     * @var $softDescriptor
+     */
     private  $softDescriptor;
 
+    /**
+     * @var $doSplit
+     */
     private  $doSplit;
 
+    /**
+     * @var $creditCard
+     */
     private  $creditCard;
 
+    /**
+     * @var $credentials
+     */
     private  $credentials;
 
+    /**
+     * @var $extraDataCollection
+     */
     private  $extraDataCollection;
 
     /**
@@ -251,7 +296,8 @@ class PaymentEntity
     }
 
     /**
-     * @param mixed $creditCard
+     * @param \Braspag\Entities\CreditCardEntity $creditCard
+     * @return $this
      */
     public function setCreditCard(CreditCardEntity $creditCard)
     {
@@ -268,7 +314,8 @@ class PaymentEntity
     }
 
     /**
-     * @param mixed $credentials
+     * @param \Braspag\Entities\CredentialsEntity $credentials
+     * @return $this
      */
     public function setCredentials(CredentialsEntity $credentials)
     {

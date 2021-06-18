@@ -6,20 +6,44 @@ namespace Braspag\Entities;
 
 class CreditCardEntity
 {
+    /**
+     * @var $cardNumber
+     */
     private $cardNumber;
 
+    /**
+     * @var $holder
+     */
     private $holder;
 
+    /**
+     * @var $expirationDate
+     */
     private $expirationDate;
 
+    /**
+     * @var $securityCode
+     */
     private $securityCode;
 
+    /**
+     * @var $brand
+     */
     private $brand;
 
+    /**
+     * @var $saveCard
+     */
     private $saveCard;
 
+    /**
+     * @var $alias
+     */
     private $alias;
 
+    /**
+     * @var $cardOnFile
+     */
     private $cardOnFile;
 
     /**

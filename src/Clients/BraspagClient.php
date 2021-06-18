@@ -9,10 +9,6 @@ use GuzzleHttp\Psr7;
 
 class BraspagClient
 {
-
-
-
-
     /**
      * @var Client
      */
@@ -36,6 +32,9 @@ class BraspagClient
 
 	}
 
+    /**
+     * @return array
+     */
 	private function headers()
 	{
 		return [
@@ -45,6 +44,12 @@ class BraspagClient
 		];
 	}
 
+    /**
+     * @param $method
+     * @param $headers
+     * @param $request
+     * @return array|void
+     */
     private function bodies( $method, $headers, $request )
     {
             if ($method == 'POST'){
@@ -72,7 +77,14 @@ class BraspagClient
 
     }
 
-
+    /**
+     * @param $method
+     * @param $endpoint
+     * @param $request
+     * @param $headers
+     * @param $options
+     * @return mixed|void
+     */
     public function __doRequest($method, $endpoint, $request, $headers, $options)
 	{
 
@@ -92,29 +104,37 @@ class BraspagClient
 
 	}
 
+    /**
+     * @param $endpoint
+     * @param $request
+     * @param array $headers
+     * @param array $options
+     * @return mixed|void
+     */
 	public function post($endpoint, $request, array $headers, array $options)
 	{
 		return $this->__doRequest('POST', $endpoint, $request, $headers, $options);
 	}
 
+    /**
+     * @param $endpoint
+     * @param array $headers
+     * @return mixed|void
+     */
 	public function get($endpoint, array $headers)
 	{
         return $this->__doRequest('GET', $endpoint, '', $headers, '');
 	}
 
+    /**
+     * @param $endpoint
+     * @param array $request
+     * @param array $headers
+     * @return mixed|void
+     */
     public function put($endpoint, array $request, array $headers)
     {
         return $this->__doRequest('PUT', $endpoint, $request, $headers, '');
     }
-
-	public function patch()
-	{
-
-	}
-
-	public function delete()
-	{
-
-	}
 
 }

@@ -4,8 +4,14 @@ namespace Braspag\Entities;
 
 class ExtraDataCollectionEntity
 {
+    /**
+     * @var $name
+     */
     private $name;
 
+    /**
+     * @var $value
+     */
     private $value;
 
     /**

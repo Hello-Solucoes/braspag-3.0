@@ -28,6 +28,10 @@ class CreditCardTransactionService
 
     }
 
+    /**
+     * @param CreditCardRequest $creditCardRequest
+     * @return mixed|void
+     */
 	public function run(CreditCardRequest $creditCardRequest)
 	{
         $creditCardFactory = new CreditCardTransactionFactory($creditCardRequest);
@@ -38,6 +42,10 @@ class CreditCardTransactionService
 		return $response;
 	}
 
+    /**
+     * @param $paymentId
+     * @return mixed|void
+     */
     public function consult($paymentId)
     {
 
@@ -46,6 +54,11 @@ class CreditCardTransactionService
         return $response;
     }
 
+    /**
+     * @param $paymentId
+     * @param $amount
+     * @return mixed|void
+     */
 	public function cancellation($paymentId, $amount)
     {
 

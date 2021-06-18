@@ -4,14 +4,29 @@ namespace Braspag\Entities;
 
 class CredentialsEntity
 {
+    /**
+     * @var $code
+     */
     private $code;
 
+    /**
+     * @var $key
+     */
     private $key;
 
+    /**
+     * @var $password
+     */
     private $password;
 
+    /**
+     * @var $userName
+     */
     private $userName;
 
+    /**
+     * @var $signature
+     */
     private $signature;
 
     /**
