@@ -8,7 +8,7 @@ use Braspag\CreditCardTransactionConsult;
 
 
 $paymentEntity = new PaymentEntity;
-$paymentEntity->setPaymentId("6088bfbf-8e73-4215-9976-33e15596bda7");
+$paymentEntity->setPaymentId("f53bef0c-efc5-46ac-95f7-ed99dec4a365");
 
 
 $creditCardTransaction = new CreditCardTransactionConsult([
