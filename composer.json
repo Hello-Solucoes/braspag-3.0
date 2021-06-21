@@ -1,5 +1,5 @@
 {
-    "name": "helloSolucoes/braspag-3.0",
+    "name": "hello-solucoes/braspag-3.0",
     "description": "This is a channel manager to deal with transaction of credit card",
     "type": "library",
     "license": "MIT",
