@@ -2,7 +2,7 @@
     "name": "lucas-malicia/braspag-api",
     "description": "This is a channel manager to deal with transaction of credit card",
     "license": "MIT",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Lucas Goiana Malicia",
