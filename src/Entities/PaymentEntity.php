@@ -84,6 +84,11 @@ class PaymentEntity
     private  $extraDataCollection;
 
     /**
+     * @var  $paymentId
+     */
+    private $paymentId;
+
+    /**
      * @return mixed
      */
     public function getProvider()
@@ -339,5 +344,26 @@ class PaymentEntity
         $this->extraDataCollection = $extraDataCollection;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPaymentId()
+    {
+        return $this->paymentId;
+    }
+
+    /**
+     * @param mixed $paymentId
+     */
+    public function setPaymentId($paymentId)
+    {
+        $this->paymentId = $paymentId;
+
+        return $this;
+
+    }
+
+
 
 }

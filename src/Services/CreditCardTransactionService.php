@@ -42,30 +42,7 @@ class CreditCardTransactionService
 		return $response;
 	}
 
-    /**
-     * @param $paymentId
-     * @return mixed|void
-     */
-    public function consult($paymentId)
-    {
 
-        $response = $this->client->get('/v2/sales/'.$paymentId, [], []);
-
-        return $response;
-    }
-
-    /**
-     * @param $paymentId
-     * @param $amount
-     * @return mixed|void
-     */
-	public function cancellation($paymentId, $amount)
-    {
-
-        $response = $this->client->put('/v2/sales/'.$paymentId.'/void?', $amount, [], []);
-
-        return $response;
-    }
 }
 
 

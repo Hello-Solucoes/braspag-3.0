@@ -103,13 +103,7 @@ $creditCardTransaction = new CreditCardTransaction([
 ]);
 
 $data = $creditCardTransaction->make($transaction);
-//print_r($data);
-
-//print_r($creditCardTransaction->makeConsult("ce38bbc1-4aa1-44dc-a142-2e4b330f4e93"));
-
-print_r($creditCardTransaction->makeCancellation("ce38bbc1-4aa1-44dc-a142-2e4b330f4e93", ["amount" => "10000"]));
-
-
+print_r($data);
 
 
 
