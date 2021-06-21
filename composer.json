@@ -10,8 +10,10 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^6.5",
-        "rakit/validation": "^1.4"
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "*"
     },
     "autoload": {
         "psr-4": {
