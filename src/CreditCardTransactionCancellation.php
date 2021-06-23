@@ -26,7 +26,7 @@ class CreditCardTransactionCancellation
      * @param CreditCardRequest $creditCardRequest
      * @return mixed|void
      */
-    public function cancellation(CreditCardRequest $creditCardRequest)
+    public function make(CreditCardRequest $creditCardRequest)
     {
         $creditCardTransactionCancellationService = $this->creditCardTransactionCancellationService->cancellation($creditCardRequest);
         return $creditCardTransactionCancellationService;

@@ -20,7 +20,7 @@ $creditCardTransaction = new CreditCardTransactionCancellation([
     'consult'=> false
 ]);;
 
-print_r($creditCardTransaction->cancellation($cancellation));
+print_r($creditCardTransaction->make($cancellation));
 
 
 

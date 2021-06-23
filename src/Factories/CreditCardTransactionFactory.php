@@ -135,8 +135,16 @@ class CreditCardTransactionFactory
         $payment->SoftDescriptor = $paymentObj->getSoftDescriptor();
         $payment->DoSplit = $paymentObj->getDoSplit();
         $payment->CreditCard = $this->makeCreditCard($paymentObj->getCreditCard());
-        $payment->Credentials = $this->makeCredentials($paymentObj->getCredentials());
-        $payment->ExtraDataCollection[] = $this->makeExtraDataCollection($paymentObj->getExtraDataCollection());
+
+        if($paymentObj->getCredentials()){
+            $payment->Credentials = $this->makeCredentials($paymentObj->getCredentials());
+        }
+
+        if($paymentObj->getExtraDataCollection()){
+            $payment->ExtraDataCollection[] = $this->makeExtraDataCollection($paymentObj->getExtraDataCollection());
+        }
+
+
 
         return $payment;
 

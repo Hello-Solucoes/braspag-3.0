@@ -47,8 +47,12 @@ $costumerEntity->setName('Ewerson Carvalho')
 
 
 $extraDataCollection = new ExtraDataCollectionEntity;
-$extraDataCollection->setName('NomeDoCampo')
-    ->setValue("ValorDoCampo");
+$extraDataCollection->setName('identificador')
+    ->setValue("e-htl");
+
+$cardOnFile = new CardOnFileEntity;
+$cardOnFile->setUsage('Used')
+    ->setReason('Unscheduled');
 
 
 $credentials = new CredentialsEntity;
@@ -58,9 +62,6 @@ $credentials->setCode("9999999")
     ->setUsername('#Braspag2018@NOMEDALOJA#')
     ->setSignature('001');
 
-$cardOnFile = new CardOnFileEntity;
-$cardOnFile->setUsage('Used')
-    ->setReason('Unscheduled');
 
 $creditCard = new CreditCardEntity;
 $creditCard->setCardNumber('4551870000000181')
@@ -80,7 +81,7 @@ $paymentEntity->setProvider("Simulado")
     ->setCountry('BRA')
     ->setInstallments(1)
     ->setInterest("ByMerchant")
-    ->setCapture(true)
+    ->setCapture(false)
     ->setAuthenticate(false)
     ->setRecurrent(false)
     ->setSoftDescriptor("mensagem")

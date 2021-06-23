@@ -33,25 +33,5 @@ class CreditCardTransaction
         return $creditCardTransaction;
 	}
 
-    /**
-     * @param $paymentId
-     * @return mixed|void
-     */
-    public function makeConsult($paymentId)
-    {
-        $creditCardTransaction = $this->creditCardTransactionService->consult($paymentId);
-        return $creditCardTransaction;
-    }
-
-    /**
-     * @param $paymentId
-     * @param $amount
-     * @return mixed|void
-     */
-    public function makeCancellation($paymentId, $amount)
-    {
-        $creditCardTransaction = $this->creditCardTransactionService->cancellation($paymentId, $amount);
-        return $creditCardTransaction;
-    }
 }
 
