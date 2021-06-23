@@ -8,7 +8,7 @@ use Braspag\CreditCardTransactionCapture;
 
 
 $paymentEntity = new PaymentEntity;
-$paymentEntity->setPaymentId("396a819a-eeb9-496c-acd7-1bded3685249");
+$paymentEntity->setPaymentId("2a7bbb83-4371-4499-9e09-b7bf666d5335");
 
 
 $creditCardTransaction = new CreditCardTransactionCapture([

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require 'vendor/autoload.php';
 
@@ -18,7 +18,7 @@ $address = new AddressEntity;
 $deliveryAddress = $address;
 
 $address->setStreet('Avenida Ipiranga')
-	->setNumber('104')
+    ->setNumber('104')
     ->setComplement('sala 4')
     ->setZipCode("03589070")
     ->setCity("São Paulo")
@@ -37,10 +37,10 @@ $deliveryAddress->setStreet('Avenida Ipiranga')
 
 $costumerEntity = new CustomerEntity;
 $costumerEntity->setName('Ewerson Carvalho')
-	->setIdentity('4138663863')
+    ->setIdentity('4138663863')
     ->setIdentityType('CPF')
-	->setEmail('ewerson@e-htl.com.br')
-	->setBirthdate('1992-06-08')
+    ->setEmail('ewerson@e-htl.com.br')
+    ->setBirthdate('1992-06-08')
     ->setIpAddress('127.0.0.1')
     ->setAddress($address)
     ->setDeliveryAddress($deliveryAddress);
@@ -105,10 +105,3 @@ $creditCardTransaction = new CreditCardTransaction([
 
 $data = $creditCardTransaction->make($transaction);
 print_r($data);
-
-
-
-
-
-
-

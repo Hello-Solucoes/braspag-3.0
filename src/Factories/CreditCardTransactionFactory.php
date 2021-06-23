@@ -66,8 +66,14 @@ class CreditCardTransactionFactory
         $customer->Email = $customerObj->getEmail();
         $customer->BirthDate = $customerObj->getBirthDate();
         $customer->IpAddress = $customerObj->getIpAddress();
-        $customer->Address = $this->makeAddress($customerObj->getAddress());
-        $customer->DeliveryAddress = $this->makeDeliveryAddress($customerObj->getDeliveryAddress());
+
+        if ($customerObj->getAddress()) {
+            $customer->Address = $this->makeAddress($customerObj->getAddress());
+        }
+
+        if($customerObj->getDeliveryAddress()){
+            $customer->DeliveryAddress = $this->makeDeliveryAddress($customerObj->getDeliveryAddress());
+        }
 
         return $customer;
 
@@ -166,9 +172,10 @@ class CreditCardTransactionFactory
         $creditCard->Brand = $creditCardObj->getBrand();
         $creditCard->SaveCard = $creditCardObj->getSaveCard();
         $creditCard->Alias = $creditCardObj->getAlias();
-        $creditCard->CardOnFile = $this->makeCardOnFile($creditCardObj->getCardOnFile());
 
-
+        if ($creditCardObj->getCardOnFile()) {
+            $creditCard->CardOnFile = $this->makeCardOnFile($creditCardObj->getCardOnFile());
+        }
 
         return $creditCard;
     }
