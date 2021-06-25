@@ -104,4 +104,6 @@ $creditCardTransaction = new CreditCardTransaction([
 ]);
 
 $data = $creditCardTransaction->make($transaction);
+
+print_r($creditCardTransaction->log());
 print_r($data);

@@ -4,8 +4,6 @@ namespace Braspag\Clients;
 
 use Braspag\Config;
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Psr7;
 
 class BraspagClient
 {

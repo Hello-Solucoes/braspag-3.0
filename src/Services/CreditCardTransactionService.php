@@ -21,6 +21,16 @@ class CreditCardTransactionService
      * @param Config $config
      */
 
+    /**
+     * @var $resquest_json
+     */
+    public $resquest_json;
+
+    /**
+     * @var $response_json
+     */
+    public $response_json;
+
     function __construct(Config $config)
     {
 
@@ -36,11 +46,21 @@ class CreditCardTransactionService
 	{
         $creditCardFactory = new CreditCardTransactionFactory($creditCardRequest);
         $request = (array) $creditCardFactory->make();
+        $this->resquest_json = $request;
 
 		$response = $this->client->post('/v2/sales',$request, [], []);
+        $this->response_json = $response;
 
 		return $response;
 	}
+
+	public function log ()
+    {
+        return [
+          'request'=> $this->response_json,
+          'response'=>  $this->response_json
+        ];
+    }
 
 
 }

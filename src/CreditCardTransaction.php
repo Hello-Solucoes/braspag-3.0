@@ -33,5 +33,10 @@ class CreditCardTransaction
         return $creditCardTransaction;
 	}
 
+	public function log ()
+    {
+        return $this->creditCardTransactionService->log();
+    }
+
 }
 
