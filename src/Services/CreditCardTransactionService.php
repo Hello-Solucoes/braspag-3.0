@@ -57,7 +57,7 @@ class CreditCardTransactionService
 	public function log ()
     {
         return [
-          'request'=> $this->response_json,
+          'request'=> $this->resquest_json,
           'response'=>  $this->response_json
         ];
     }
