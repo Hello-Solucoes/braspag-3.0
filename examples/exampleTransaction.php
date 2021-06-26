@@ -17,29 +17,29 @@ use Braspag\CreditCardTransaction;
 $address = new AddressEntity;
 $deliveryAddress = $address;
 
-$address->setStreet('Avenida Ipiranga')
+$address->setStreet('Rua Keia Nakamura')
     ->setNumber('104')
     ->setComplement('sala 4')
-    ->setZipCode("03589070")
+    ->setZipCode("08260240")
     ->setCity("São Paulo")
     ->setState('SP')
     ->setCountry('BRA')
-    ->setDistrict('República');
+    ->setDistrict('Colônia');
 
-$deliveryAddress->setStreet('Avenida Ipiranga')
+$deliveryAddress->setStreet('Rua Keia Nakamura')
     ->setNumber('104')
     ->setComplement('sala 4')
-    ->setZipCode("03589070")
+    ->setZipCode("08260240")
     ->setCity("São Paulo")
     ->setState('SP')
     ->setCountry('BRA')
-    ->setDistrict('República');
+    ->setDistrict('Colônia');
 
 $costumerEntity = new CustomerEntity;
-$costumerEntity->setName('Ewerson Carvalho')
-    ->setIdentity('4138663863')
+$costumerEntity->setName('Lucas Goiana')
+    ->setIdentity('88432988014')
     ->setIdentityType('CPF')
-    ->setEmail('ewerson@e-htl.com.br')
+    ->setEmail('teste@braspag.com.br')
     ->setBirthdate('1992-06-08')
     ->setIpAddress('127.0.0.1')
     ->setAddress($address)
@@ -48,7 +48,7 @@ $costumerEntity->setName('Ewerson Carvalho')
 
 $extraDataCollection = new ExtraDataCollectionEntity;
 $extraDataCollection->setName('identificador')
-    ->setValue("e-htl");
+    ->setValue("teste");
 
 $cardOnFile = new CardOnFileEntity;
 $cardOnFile->setUsage('Used')
@@ -64,7 +64,7 @@ $credentials->setCode("9999999")
 
 
 $creditCard = new CreditCardEntity;
-$creditCard->setCardNumber('4551870000000181')
+$creditCard->setCardNumber('5446196812806039')
     ->setHolder("Simulado")
     ->setExpirationDate("12/2021")
     ->setSecurityCode('123')
@@ -105,5 +105,5 @@ $creditCardTransaction = new CreditCardTransaction([
 
 $data = $creditCardTransaction->make($transaction);
 
-print_r($creditCardTransaction->log());
-print_r($data);
+//print_r($creditCardTransaction->log());
+print_r($data->Payment);
