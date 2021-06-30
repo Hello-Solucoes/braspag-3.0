@@ -16,6 +16,16 @@ class CreditCardTransactionCaptureService
     private $client;
 
     /**
+     * @var $resquest_json
+     */
+    public $resquest_json;
+
+    /**
+     * @var $response_json
+     */
+    public $response_json;
+
+    /**
      * @param Config $config
      */
 
@@ -35,9 +45,19 @@ class CreditCardTransactionCaptureService
     {
         $creditCardCaptureTransactionFactory = new CreditCardCaptureTransactionFactory($creditCardRequest);
         $request = (array) $creditCardCaptureTransactionFactory->make();
+        $this->resquest_json = $request;
 
         $response = $this->client->put('/v2/sales/'.$request['PaymentId'].'/capture', [], []);
+        $this->response_json = $response;
 
         return $response;
+    }
+
+    public function log ()
+    {
+        return [
+            'request'=> $this->resquest_json,
+            'response'=>  $this->response_json
+        ];
     }
 }

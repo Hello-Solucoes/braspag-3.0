@@ -17,6 +17,18 @@ class CreditCardTransactionCancellationService
     private $client;
 
     /**
+     * @var $resquest_json
+     */
+
+    public $resquest_json;
+
+    /**
+     * @var $response_json
+     */
+
+    public $response_json;
+
+    /**
      * @param Config $config
      */
 
@@ -33,12 +45,23 @@ class CreditCardTransactionCancellationService
 
         $creditCardCancellationFactory = new CreditCardTransactionCancellationFactory($cardRequest);
         $request = (array) $creditCardCancellationFactory->make();
+        $this->resquest_json = $request;
+
         $paymentId = $request['PaymentId'];
         unset($request['PaymentId']);
 
         $response = $this->client->put('/v2/sales/'.$paymentId.'/void?', $request, [], []);
+        $this->response_json = $response;
 
         return $response;
+    }
+
+    public function log ()
+    {
+        return [
+            'request'=> $this->resquest_json,
+            'response'=>  $this->response_json
+        ];
     }
 
 }

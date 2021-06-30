@@ -103,7 +103,5 @@ $creditCardTransaction = new CreditCardTransaction([
     'consult'=> false
 ]);
 
-$data = $creditCardTransaction->make($transaction);
-
-//print_r($creditCardTransaction->log());
-print_r($data->Payment);
+print_r($creditCardTransaction->make($transaction));
+print_r($creditCardTransaction->log());

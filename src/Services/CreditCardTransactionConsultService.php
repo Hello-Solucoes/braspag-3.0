@@ -14,6 +14,15 @@ class CreditCardTransactionConsultService
      */
 
     private $client;
+    /**
+     * @var $resquest_json
+     */
+    public $resquest_json;
+
+    /**
+     * @var $response_json
+     */
+    public $response_json;
 
     /**
      * @param Config $config
@@ -35,9 +44,19 @@ class CreditCardTransactionConsultService
     {
         $creditCardConsultFactory = new CreditCardTransactionConsultFactory($creditCardRequest);
         $request = (array) $creditCardConsultFactory->make();
+        $this->resquest_json = $request;
 
         $response = $this->client->get('/v2/sales/'.$request['PaymentId'], [], []);
+        $this->response_json = $response;
 
         return $response;
+    }
+
+    public function log ()
+    {
+        return [
+            'request'=> $this->resquest_json,
+            'response'=>  $this->response_json
+        ];
     }
 }

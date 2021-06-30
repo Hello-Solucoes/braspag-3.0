@@ -32,4 +32,13 @@ class CreditCardTransactionCapture
         $creditCardTransaction = $this->creditCardTransactionCaptureService->capture($creditCardRequest);
         return $creditCardTransaction;
     }
+
+    /**
+     * @return mixed
+     */
+
+    public function log ()
+    {
+        return $this->creditCardTransactionCaptureService->log();
+    }
 }

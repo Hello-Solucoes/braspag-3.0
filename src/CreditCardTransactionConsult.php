@@ -32,4 +32,13 @@ class CreditCardTransactionConsult
         return $creditCardTransactionService;
     }
 
+    /**
+     * @return mixed
+     */
+
+    public function log ()
+    {
+        return $this->creditCardTransactionConsultService->log();
+    }
+
 }

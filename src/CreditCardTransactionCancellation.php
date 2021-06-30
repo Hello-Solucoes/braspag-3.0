@@ -32,4 +32,13 @@ class CreditCardTransactionCancellation
         return $creditCardTransactionCancellationService;
     }
 
+    /**
+     * @return mixed
+     */
+
+    public function log ()
+    {
+        return $this->creditCardTransactionCancellationService->log();
+    }
+
 }

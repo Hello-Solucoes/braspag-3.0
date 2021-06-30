@@ -8,7 +8,7 @@ use Braspag\CreditCardTransactionCancellation;
 
 
 $paymentEntity = new PaymentEntity;
-$paymentEntity->setPaymentId("f53bef0c-efc5-46ac-95f7-ed99dec4a365")
+$paymentEntity->setPaymentId("5bb74afb-4629-4c22-9876-c425775122f5")
     ->setAmount('10000');
 
 
@@ -21,6 +21,8 @@ $creditCardTransaction = new CreditCardTransactionCancellation([
 ]);;
 
 print_r($creditCardTransaction->make($cancellation));
+
+print_r($creditCardTransaction->log());
 
 
 
