@@ -17,6 +17,11 @@ class BraspagClient
      */
 	private $config;
 
+	private $merchantId;
+
+	private $merchantKey;
+
+
     /**
      *
      * Constructor method
@@ -24,8 +29,11 @@ class BraspagClient
      */
 	function __construct(Config $config )
 	{
+
+	    $this->merchantId = $config->currentEnv()['MerchantId'];
+	    $this->merchantKey = $config->currentEnv()['MerchantKey'];
 		$this->httpClient = new Client([
-			'base_uri' => $config->currentEnv()
+			'base_uri' => $config->currentEnv()['url']
 		]);
 
 	}
@@ -36,8 +44,8 @@ class BraspagClient
 	private function headers()
 	{
 		return [
-			'MerchantId' => '273321f7-8daa-4904-86f9-0392f6b4cc8c',
-			'MerchantKey' => 'XMYBOTJIDVCYYLHIWFGSVOFDXAJZUUHYUWZSSBPF',
+			'MerchantId' => $this->merchantId,
+			'MerchantKey' =>  $this->merchantKey,
 			'RequestId' => rand(0, 1000)
 		];
 	}

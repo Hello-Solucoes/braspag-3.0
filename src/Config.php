@@ -27,39 +27,55 @@ class Config
     }
 
     /**
-     * @return string
+     * @return array
      */
     private function testTransaction()
     {
-    	return self::BASE_URI_HOMOLOG;
+    	return [
+    	    'url' => self::BASE_URI_HOMOLOG,
+            'MerchantId' =>$this->production['MerchantId'],
+            'MerchantKey' =>$this->production['MerchantKey']
+        ];
     }
 
     /**
-     * @return string
+     * @return array
      */
     private function testConsult()
     {
-    	return self::BASE_URI_HOMOLOG_CONSULT;
+        return [
+            'url' => self::BASE_URI_HOMOLOG_CONSULT,
+            'MerchantId' =>$this->production['MerchantId'],
+            'MerchantKey' =>$this->production['MerchantKey']
+        ];
     }
 
     /**
-     * @return string
+     * @return array
      */
    	private function prodTransaction()
     {
-    	return self::BASE_URI_HOMOLOG;
+        return [
+            'url' => self::BASE_URI_HOMOLOG,
+            'MerchantId' =>$this->production['MerchantId'],
+            'MerchantKey' =>$this->production['MerchantKey']
+        ];
     }
 
     /**
-     * @return string
+     * @return array
      */
     private function prodConsult()
     {
-    	return self::BASE_URI_PROD_CONSULT;
+        return [
+            'url' => self::BASE_URI_PROD_CONSULT,
+            'MerchantId' =>$this->production['MerchantId'],
+            'MerchantKey' =>$this->production['MerchantKey']
+        ];
     }
 
     /**
-     * @return string|void
+     * @return array|void
      */
     public function currentEnv()
     {
