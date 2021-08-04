@@ -1,6 +1,6 @@
 <?php 
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 use Braspag\Requests\CreditCardRequest;
 use Braspag\Entities\PaymentEntity;
@@ -8,7 +8,7 @@ use Braspag\CreditCardTransactionCancellation;
 
 
 $paymentEntity = new PaymentEntity;
-$paymentEntity->setPaymentId("5bb74afb-4629-4c22-9876-c425775122f5")
+$paymentEntity->setPaymentId("0255c38e-7031-4442-adad-3ebb059aca25")
     ->setAmount('10000');
 
 
@@ -17,7 +17,9 @@ $cancellation->setPaymentEntity($paymentEntity);
 
 $creditCardTransaction = new CreditCardTransactionCancellation([
     'production'=> false,
-    'consult'=> false
+    'consult'=> false,
+    'MerchantId' => '273321f7-8daa-4904-86f9-0392f6b4cc8c',
+    'MerchantKey' => 'XMYBOTJIDVCYYLHIWFGSVOFDXAJZUUHYUWZSSBPF'
 ]);;
 
 print_r($creditCardTransaction->make($cancellation));

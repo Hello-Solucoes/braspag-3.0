@@ -1,6 +1,6 @@
 <?php 
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 use Braspag\Requests\CreditCardRequest;
 use Braspag\Entities\PaymentEntity;
@@ -8,12 +8,14 @@ use Braspag\CreditCardTransactionConsult;
 
 
 $paymentEntity = new PaymentEntity;
-$paymentEntity->setPaymentId("5bb74afb-4629-4c22-9876-c425775122f5");
+$paymentEntity->setPaymentId("c265860d-e88f-4fec-af51-fd379f0f63f3");
 
 
 $creditCardTransaction = new CreditCardTransactionConsult([
     'production'=> false,
-    'consult'=> true
+    'consult'=> true,
+    'MerchantId' => '273321f7-8daa-4904-86f9-0392f6b4cc8c',
+    'MerchantKey' => 'XMYBOTJIDVCYYLHIWFGSVOFDXAJZUUHYUWZSSBPF'
 ]);
 
 $consult = new CreditCardRequest;

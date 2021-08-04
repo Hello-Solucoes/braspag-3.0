@@ -84,6 +84,11 @@ class PaymentEntity
     private  $extraDataCollection;
 
     /**
+     * @var $fraudAnalysis
+     */
+    private $fraudAnalysis;
+
+    /**
      * @var  $paymentId
      */
     private $paymentId;
@@ -339,7 +344,7 @@ class PaymentEntity
     /**
      * @param mixed $extraDataCollection
      */
-    public function setExtraDataCollection($extraDataCollection)
+    public function setExtraDataCollection(ExtraDataCollectionEntity $extraDataCollection)
     {
         $this->extraDataCollection = $extraDataCollection;
         return $this;
@@ -362,6 +367,24 @@ class PaymentEntity
 
         return $this;
 
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFraudAnalysis()
+    {
+        return $this->fraudAnalysis;
+    }
+
+    /**
+     * @param mixed $fraudAnalysis
+     * @return PaymentEntity
+     */
+    public function setFraudAnalysis(FraudAnalysisEntity $fraudAnalysis)
+    {
+        $this->fraudAnalysis = $fraudAnalysis;
+        return $this;
     }
 
 

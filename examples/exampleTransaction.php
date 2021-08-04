@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 use Braspag\Requests\CreditCardRequest;
 use Braspag\Entities\CustomerEntity;
@@ -76,7 +76,7 @@ $creditCard->setCardNumber('5446196812806039')
 $paymentEntity = new PaymentEntity;
 $paymentEntity->setProvider("Simulado")
     ->setType('CreditCard')
-    ->setAmount("10000")
+    ->setAmount(810.99)
     ->setCurrency("BRL")
     ->setCountry('BRA')
     ->setInstallments(1)
@@ -100,8 +100,11 @@ $transaction->setMerchantOrderIdEntity($merchantOrderId)
 
 $creditCardTransaction = new CreditCardTransaction([
     'production'=> false,
-    'consult'=> false
+    'consult'=> false,
+    'MerchantId' => '273321f7-8daa-4904-86f9-0392f6b4cc8c',
+	'MerchantKey' => 'XMYBOTJIDVCYYLHIWFGSVOFDXAJZUUHYUWZSSBPF'
 ]);
 
 print_r($creditCardTransaction->make($transaction));
-print_r($creditCardTransaction->log());
+
+//print_r($creditCardTransaction->log());
