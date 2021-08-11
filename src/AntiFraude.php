@@ -36,7 +36,7 @@ class AntiFraude
 
 	public function log ()
     {
-        return $this->creditCardTransactionService->log();
+        return $this->antiFraudeService->log();
     }
 
 }

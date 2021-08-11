@@ -4,53 +4,31 @@
 namespace Braspag\Entities;
 
 
-class TravelLegsEntity
+class MerchantDefinedFieldsDataEntity
 {
     /**
-     * @var $origin
+     * @var $merchanDefinesFieldsEntity
      */
-    private $origin;
-
-    /**
-     * @var $destination
-     */
-    private $destination;
+   private $merchanDefinesFieldsEntity =[];
 
     /**
      * @return mixed
      */
-    public function getOrigin()
+    public function getMerchanDefinesFieldsEntity()
     {
-        return $this->origin;
+        return $this->merchanDefinesFieldsEntity;
     }
 
     /**
-     * @param mixed $origin
-     * @return TravelLegsEntity
+     * @param mixed $merchanDefinesFieldsEntity
+     * @return MerchantDefinedFieldsDataEntity
      */
-    public function setOrigin($origin)
+    public function setMerchanDefinesFieldsEntity($merchanDefinesFieldsEntity)
     {
-        $this->origin = $origin;
+        $this->merchanDefinesFieldsEntity[] = $merchanDefinesFieldsEntity;
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getDestination()
-    {
-        return $this->destination;
-    }
-
-    /**
-     * @param mixed $destination
-     * @return TravelLegsEntity
-     */
-    public function setDestination($destination)
-    {
-        $this->destination = $destination;
-        return $this;
-    }
 
 
 

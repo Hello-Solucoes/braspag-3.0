@@ -246,7 +246,7 @@ class AntifraudeFactory
         }
 
         if($fraudAnalysisObj->getMerchantDefinedFields()){
-            $fraudAnalysis->MerchantDefinedFields[] = $this->makeMerchantDefinedFields($fraudAnalysisObj->getMerchantDefinedFields());
+            $fraudAnalysis->MerchantDefinedFields = $this->makeMerchantDefinedFields($fraudAnalysisObj->getMerchantDefinedFields());
         }
 
         if($fraudAnalysisObj->getShipping()){
@@ -312,11 +312,12 @@ class AntifraudeFactory
 
     private function makeMerchantDefinedFields ($merchantDefinedFieldsObj)
     {
-        $merchantDefinedFields  = new StdClass();
-
-        $merchantDefinedFields->Id = $merchantDefinedFieldsObj->getId();
-        $merchantDefinedFields->Value = $merchantDefinedFieldsObj->getValue();
-
+        $i = 0;
+        foreach ($merchantDefinedFieldsObj->getMerchanDefinesFieldsEntity() as $obj) {
+            $merchantDefinedFields[$i]['Id'] = $obj->getId();
+            $merchantDefinedFields[$i]['Value'] = $obj->getValue();
+            $i++;
+        }
         return $merchantDefinedFields;
     }
 
