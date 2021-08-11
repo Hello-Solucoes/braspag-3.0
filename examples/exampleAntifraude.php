@@ -21,6 +21,7 @@ use Braspag\Entities\TravelEntity;
 use Braspag\Entities\PassengersEntity;
 use Braspag\Entities\TravelLegsEntity;
 use Braspag\Entities\ShippingEntity;
+use Braspag\Entities\MerchantDefinedFieldsDataEntity;
 
     $travelLegs = new TravelLegsEntity();
     $travelLegs->setOrigin("AMS")
@@ -45,10 +46,28 @@ use Braspag\Entities\ShippingEntity;
         ->setMethod("LowCost")
         ->setPhone("551121840540");
 
-    $merchantDefinedFieldsEntity = new MerchantDefinedFieldsEntity();
-    $merchantDefinedFieldsEntity->setId(2)
-        ->setValue(100);
+    $merchantDefinedFieldsEntity = new MerchantDefinedFieldsDataEntity();
 
+    $merchantDefinedFieldsEntity->setMerchanDefinesFieldsEntity(
+        (new MerchantDefinedFieldsEntity)
+            ->setId(2)
+            ->setValue(100)
+
+    );
+
+    $merchantDefinedFieldsEntity->setMerchanDefinesFieldsEntity(
+        (new MerchantDefinedFieldsEntity)
+            ->setId(3)
+            ->setValue(1020)
+
+    );
+
+    $merchantDefinedFieldsEntity->setMerchanDefinesFieldsEntity(
+        (new MerchantDefinedFieldsEntity)
+            ->setId(3)
+            ->setValue(1020)
+
+    );
 
     $itemEntity = new ItemEntity();
     $itemEntity->setGiftCategory("Undefined")
