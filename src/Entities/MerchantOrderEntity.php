@@ -27,6 +27,4 @@ class MerchantOrderEntity
         $this->merchantOrderId = $merchantOrderId;
         return $this;
     }
-
-
 }

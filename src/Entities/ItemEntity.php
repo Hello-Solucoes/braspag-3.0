@@ -234,7 +234,6 @@ class ItemEntity
     }
 
 
-
     /**
      * @return mixed
      */
@@ -306,10 +305,4 @@ class ItemEntity
         $this->velocityHedge = $velocityHedge;
         return $this;
     }
-
-
-
-
-
-
 }

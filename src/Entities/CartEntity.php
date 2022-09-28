@@ -21,11 +21,10 @@ class CartEntity
      */
     private $items;
 
-
     /**
      * @return mixed
      */
-        public function getIsGift()
+    public function getIsGift()
     {
         return $this->isGift;
     }
@@ -75,7 +74,4 @@ class CartEntity
         $this->items = $items;
         return $this;
     }
-
-
-
 }

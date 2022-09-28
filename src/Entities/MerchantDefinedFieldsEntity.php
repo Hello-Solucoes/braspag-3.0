@@ -52,7 +52,4 @@ class MerchantDefinedFieldsEntity
         $this->value = $value;
         return $this;
     }
-
-
-
 }

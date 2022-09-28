@@ -113,6 +113,4 @@ class CredentialsEntity
         $this->signature = $signature;
         return $this;
     }
-
-
 }

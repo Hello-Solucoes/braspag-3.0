@@ -281,6 +281,4 @@ class FraudAnalysisEntity
         $this->travel = $travel;
         return $this;
     }
-
-
 }

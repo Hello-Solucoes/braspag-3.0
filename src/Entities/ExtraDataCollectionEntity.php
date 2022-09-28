@@ -47,6 +47,4 @@ class ExtraDataCollectionEntity
         $this->value = $value;
         return $this;
     }
-
-
 }

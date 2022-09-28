@@ -181,5 +181,4 @@ class AddressEntity
         $this->country = $country;
         return $this;
     }
-
 }

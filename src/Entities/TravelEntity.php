@@ -6,20 +6,20 @@ namespace Braspag\Entities;
 
 class TravelEntity
 {
-   /**
-   * @var $journeyType
-   */
-   private $journeyType;
+    /**
+     * @var $journeyType
+     */
+    private $journeyType;
 
-   /**
-   * @var $departureTime
-   */
-   private $departureTime;
+    /**
+     * @var $departureTime
+     */
+    private $departureTime;
 
-   /**
-   * @var $passengers
-   */
-   private $passengers;
+    /**
+     * @var $passengers
+     */
+    private $passengers;
 
     /**
      * @return mixed
@@ -74,8 +74,4 @@ class TravelEntity
         $this->passengers = $passengers;
         return $this;
     }
-
-
-
-
 }

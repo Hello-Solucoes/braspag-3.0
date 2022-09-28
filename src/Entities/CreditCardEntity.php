@@ -181,5 +181,4 @@ class CreditCardEntity
         $this->cardOnFile = $cardOnFile;
         return $this;
     }
-
 }

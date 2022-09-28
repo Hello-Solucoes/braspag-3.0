@@ -51,8 +51,4 @@ class TravelLegsEntity
         $this->destination = $destination;
         return $this;
     }
-
-
-
-
 }

@@ -74,8 +74,4 @@ class ShippingEntity
         $this->phone = $phone;
         return $this;
     }
-
-
-
-
 }

@@ -182,7 +182,4 @@ class CustomerEntity
         $this->deliveryAddress = $deliveryAddress;
         return $this;
     }
-
-
-
 }

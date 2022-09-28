@@ -2,28 +2,28 @@
 
 require '../vendor/autoload.php';
 
-use Braspag\Entities\CustomerEntity;
 use Braspag\Entities\AddressEntity;
-use Braspag\Entities\PaymentEntity;
-use Braspag\Entities\CreditCardEntity;
-use Braspag\Entities\CardOnFileEntity;
-use Braspag\Entities\CredentialsEntity;
-use Braspag\Entities\ExtraDataCollectionEntity;
-use Braspag\Entities\MerchantOrderEntity;
-use Braspag\AntiFraude;
-use Braspag\Entities\FraudAnalysisEntity;
 use Braspag\Entities\BrowserEntity;
+use Braspag\Entities\CardOnFileEntity;
 use Braspag\Entities\CartEntity;
+use Braspag\Entities\CredentialsEntity;
+use Braspag\Entities\CreditCardEntity;
+use Braspag\Entities\CustomerEntity;
+use Braspag\Entities\ExtraDataCollectionEntity;
+use Braspag\Entities\FraudAnalysisEntity;
 use Braspag\Entities\ItemEntity;
-use Braspag\Requests\AntiFraudeRequest;
-use Braspag\Entities\MerchantDefinedFieldsEntity;
-use Braspag\Entities\TravelEntity;
-use Braspag\Entities\PassengersEntity;
-use Braspag\Entities\TravelLegsEntity;
-use Braspag\Entities\ShippingEntity;
 use Braspag\Entities\MerchantDefinedFieldsDataEntity;
+use Braspag\Entities\MerchantDefinedFieldsEntity;
+use Braspag\Entities\MerchantOrderEntity;
+use Braspag\Entities\PassengersEntity;
+use Braspag\Entities\PaymentEntity;
+use Braspag\Entities\ShippingEntity;
+use Braspag\Entities\TravelEntity;
+use Braspag\Entities\TravelLegsEntity;
+use Braspag\Http\Controllers\AntiFraud;
+use Braspag\Http\Requests\AntiFraudRequest;
 
-    $travelLegs = new TravelLegsEntity();
+$travelLegs = new TravelLegsEntity();
     $travelLegs->setOrigin("AMS")
         ->setDestination("GIG");
 
@@ -191,12 +191,12 @@ use Braspag\Entities\MerchantDefinedFieldsDataEntity;
     $merchantOrderId = new MerchantOrderEntity;
     $merchantOrderId->setMerchantOrderId('2017051001');
 
-    $antiFraudeRequest = new AntiFraudeRequest();
+    $antiFraudeRequest = new AntiFraudRequest();
     $antiFraudeRequest->setMerchantOrderIdEntity($merchantOrderId)
     ->setCustomerEntity($costumerEntity)
     ->setPaymentEntity($paymentEntity);
 
-    $antiFraude = new AntiFraude([
+    $antiFraude = new AntiFraud([
         'production'=> false,
         'consult'=> false,
         'MerchantId' => '273321f7-8daa-4904-86f9-0392f6b4cc8c',
