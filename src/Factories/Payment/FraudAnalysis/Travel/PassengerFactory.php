@@ -44,6 +44,6 @@ class PassengerFactory
      */
     private function makeTravelLegs($travelLegs)
     {
-        return app(TravelLegFactory::class)->make($travelLegs);
+        return (new TravelLegFactory)->make($travelLegs);
     }
 }

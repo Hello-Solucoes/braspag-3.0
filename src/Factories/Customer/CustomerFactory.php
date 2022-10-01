@@ -45,7 +45,7 @@ class CustomerFactory
      */
     private function makeAddress($address)
     {
-        return app(AddressFactory::class)->make($address);
+        return (new AddressFactory)->make($address);
     }
 
     /**
@@ -54,6 +54,6 @@ class CustomerFactory
      */
     private function makeDeliveryAddress($deliveryAddress)
     {
-        return app(AddressFactory::class)->make($deliveryAddress);
+        return (new AddressFactory)->make($deliveryAddress);
     }
 }

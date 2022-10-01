@@ -16,7 +16,7 @@ class PaymentFactory
      * @param $payment
      * @return array
      */
-    private function make($payment)
+    public function make($payment)
     {
         $response = [
             'Provider' => $payment->getProvider(),
@@ -55,7 +55,7 @@ class PaymentFactory
      */
     private function makeCreditCard($creditCard)
     {
-        return app(CreditCardFactory::class)->make($creditCard);
+        return (new CreditCardFactory)->make($creditCard);
     }
 
     /**
@@ -64,7 +64,7 @@ class PaymentFactory
      */
     private function makeCredentials($credential)
     {
-        return app(CredentialFactory::class)->make($credential);
+        return (new CredentialFactory)->make($credential);
     }
 
     /**
@@ -73,7 +73,7 @@ class PaymentFactory
      */
     private function makeExtraDataCollection($extraDataCollection)
     {
-        return app(ExtraCollectionFactory::class)->make($extraDataCollection);
+        return (new ExtraCollectionFactory)->make($extraDataCollection);
     }
 
     /**
@@ -82,6 +82,6 @@ class PaymentFactory
      */
     private function makeFraudAnalysis($fraudAnalysis)
     {
-        return app(FraudAnalysisFactory::class)->make($fraudAnalysis);
+        return (new FraudAnalysisFactory)->make($fraudAnalysis);
     }
 }

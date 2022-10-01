@@ -196,14 +196,9 @@ $travelLegs = new TravelLegsEntity();
     ->setCustomerEntity($costumerEntity)
     ->setPaymentEntity($paymentEntity);
 
-    $antiFraude = new AntiFraud([
-        'production'=> false,
-        'consult'=> false,
-        'MerchantId' => '273321f7-8daa-4904-86f9-0392f6b4cc8c',
-        'MerchantKey' => 'XMYBOTJIDVCYYLHIWFGSVOFDXAJZUUHYUWZSSBPF'
-    ]);
+    $antiFraude = new AntiFraud();
 
-    print_r($antiFraude->make($antiFraudeRequest));
+    echo "<pre>";var_dump($antiFraude->make($antiFraudeRequest));exit;
 
 
 

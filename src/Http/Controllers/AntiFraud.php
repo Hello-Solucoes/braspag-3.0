@@ -16,7 +16,7 @@ class AntiFraud
     private $service;
 
     /**
-     * @param array $config
+     *
      */
     function __construct()
     {

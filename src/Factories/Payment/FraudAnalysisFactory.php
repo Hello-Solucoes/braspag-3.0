@@ -57,16 +57,16 @@ class FraudAnalysisFactory
      */
     private function makeBrowser($browser)
     {
-        return app(BrowserFactory::class)->make($browser);
+        return (new BrowserFactory)->make($browser);
     }
 
     /**
-     * @param $cartObj
+     * @param $cart
      * @return array
      */
-    private function makeCart($cartObj)
+    private function makeCart($cart)
     {
-        return app(CartFactory::class)->make($cartObj->getItems());
+        return (new CartFactory)->make($cart);
     }
 
     /**
@@ -79,7 +79,7 @@ class FraudAnalysisFactory
 
         if (!empty($merchantDefinedFields->getMerchanDefinesFieldsEntity())) {
             foreach ($merchantDefinedFields->getMerchanDefinesFieldsEntity() as $field) {
-                $response[] = app(MerchantDefinedFieldFactory::class)->make($field);
+                $response[] = (new MerchantDefinedFieldFactory)->make($field);
             }
         }
 
@@ -92,7 +92,7 @@ class FraudAnalysisFactory
      */
     private function makeShipping($shipping)
     {
-        return app(ShippingFactory::class)->make($shipping);
+        return (new ShippingFactory)->make($shipping);
     }
 
     /**
@@ -101,6 +101,6 @@ class FraudAnalysisFactory
      */
     private function makeTravel($travel)
     {
-        return app(TravelFactory::class)->make($travel);
+        return (new TravelFactory)->make($travel);
     }
 }

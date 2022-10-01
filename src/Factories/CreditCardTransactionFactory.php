@@ -31,7 +31,7 @@ class CreditCardTransactionFactory
      */
     private function makeMerchantOrder($merchantOrder)
     {
-        return app(MerchantOrderFactory::class)->make($merchantOrder);
+        return (new MerchantOrderFactory)->make($merchantOrder);
     }
 
     /**
@@ -40,7 +40,7 @@ class CreditCardTransactionFactory
      */
     private function makeCustomer($customer)
     {
-        return app(CustomerFactory::class)->make($customer);
+        return (new CustomerFactory)->make($customer);
     }
 
     /**
@@ -49,6 +49,6 @@ class CreditCardTransactionFactory
      */
     private function makePayment($payment)
     {
-        return app(PaymentFactory::class)->make($payment);
+        return (new PaymentFactory)->make($payment);
     }
 }

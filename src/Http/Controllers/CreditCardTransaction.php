@@ -18,7 +18,7 @@ class CreditCardTransaction
     private $service;
 
     /**
-     * @param array $config
+     *
      */
     function __construct()
     {

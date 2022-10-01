@@ -16,7 +16,7 @@ class AntiFraudService extends BaseService
      */
     public function antiFraude(AntiFraudRequest $antiFraudeRequest)
     {
-        $this->resquest_json = app(AntiFraudFactory::class)->make($antiFraudeRequest);
+        $this->resquest_json = (new AntiFraudFactory)->make($antiFraudeRequest);
         $this->response_json = $this->client->antiFraud($this->resquest_json);
         return $this->response_json;
     }

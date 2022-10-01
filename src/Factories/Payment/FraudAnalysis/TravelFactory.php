@@ -40,6 +40,6 @@ class TravelFactory
      */
     private function makePassengers($passengers)
     {
-        return app(PassengerFactory::class)->make($passengers);
+        return (new PassengerFactory)->make($passengers);
     }
 }

@@ -39,6 +39,6 @@ class CartFactory
      */
     private function makeItems($items)
     {
-        return app(ItemFactory::class)->make($items);
+        return (new ItemFactory)->make($items);
     }
 }

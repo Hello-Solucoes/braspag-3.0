@@ -44,6 +44,6 @@ class CreditCardFactory
      */
     private function makeCardOnFile($cardOnFile)
     {
-        return app(CardOnFileFactory::class)->make($cardOnFile);
+        return (new CardOnFileFactory)->make($cardOnFile);
     }
 }

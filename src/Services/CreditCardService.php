@@ -23,7 +23,7 @@ class CreditCardService extends BaseService
      */
     public function consult(CreditCardRequest $creditCardRequest)
     {
-        $this->request = app(CreditCardConsultFactory::class)->make($creditCardRequest);
+        $this->request = (new CreditCardConsultFactory)->make($creditCardRequest);
         $this->response = $this->client->creditCardConsult($this->request['PaymentId']);
         return $this->response;
     }
@@ -35,7 +35,7 @@ class CreditCardService extends BaseService
      */
     public function transaction(CreditCardRequest $creditCardRequest)
     {
-        $this->request = app(CreditCardTransactionFactory::class)->make($creditCardRequest);
+        $this->request = (new CreditCardTransactionFactory)->make($creditCardRequest);
         $this->response = $this->client->creditCardTransaction($this->request);
         return $this->response;
     }
@@ -47,7 +47,7 @@ class CreditCardService extends BaseService
      */
     public function capture(CreditCardRequest $creditCardRequest)
     {
-        $this->request = app(CreditCardCaptureFactory::class)->make($creditCardRequest);
+        $this->request = (new CreditCardCaptureFactory)->make($creditCardRequest);
         $this->response = $this->client->creditCardCapture($this->request['PaymentId']);
         return $this->response;
     }
@@ -59,7 +59,7 @@ class CreditCardService extends BaseService
      */
     public function cancellation(CreditCardRequest $creditCardRequest)
     {
-        $this->request = app(CreditCardCancellationFactory::class)->make($creditCardRequest);
+        $this->request = (new CreditCardCancellationFactory)->make($creditCardRequest);
         $this->response = $this->client->creditCardCancellation($this->request['PaymentId'], $this->request);
         return $this->response;
     }
