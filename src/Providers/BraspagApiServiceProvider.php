@@ -6,7 +6,7 @@
  * Time: 09:00
  */
 
-namespace Braspag\Providers;
+namespace BraspagApi\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

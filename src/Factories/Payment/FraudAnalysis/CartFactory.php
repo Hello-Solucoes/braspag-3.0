@@ -6,9 +6,9 @@
  * Time: 10:39
  */
 
-namespace Braspag\Factories\Payment\FraudAnalysis;
+namespace BraspagApi\Factories\Payment\FraudAnalysis;
 
-use Braspag\Factories\Payment\FraudAnalysis\Cart\ItemFactory;
+use BraspagApi\Factories\Payment\FraudAnalysis\Cart\ItemFactory;
 
 /**
  *

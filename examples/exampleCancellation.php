@@ -2,9 +2,9 @@
 
 require '../vendor/autoload.php';
 
-use Braspag\Entities\PaymentEntity;
-use Braspag\Http\Controllers\CreditCardTransactionCancellation;
-use Braspag\Http\Requests\CreditCardRequest;
+use BraspagApi\Entities\PaymentEntity;
+use BraspagApi\Http\Controllers\CreditCardTransactionCancellation;
+use BraspagApi\Http\Requests\CreditCardRequest;
 
 
 $paymentEntity = new PaymentEntity;

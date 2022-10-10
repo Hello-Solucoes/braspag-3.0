@@ -1,8 +1,8 @@
 <?php
 
-namespace Braspag\Factories;
+namespace BraspagApi\Factories;
 
-use Braspag\Http\Requests\CreditCardRequest;
+use BraspagApi\Http\Requests\CreditCardRequest;
 use StdClass;
 
 /**

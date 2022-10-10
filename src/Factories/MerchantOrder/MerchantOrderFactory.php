@@ -6,7 +6,7 @@
  * Time: 10:23
  */
 
-namespace Braspag\Factories\MerchantOrder;
+namespace BraspagApi\Factories\MerchantOrder;
 
 /**
  *

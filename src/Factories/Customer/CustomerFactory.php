@@ -6,7 +6,7 @@
  * Time: 10:19
  */
 
-namespace Braspag\Factories\Customer;
+namespace BraspagApi\Factories\Customer;
 
 /**
  *

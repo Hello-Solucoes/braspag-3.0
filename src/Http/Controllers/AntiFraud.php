@@ -1,20 +1,15 @@
 <?php
 
-namespace Braspag\Http\Controllers;
+namespace BraspagApi\Http\Controllers;
 
-use Braspag\Http\Requests\AntiFraudRequest;
-use Braspag\Services\AntiFraudService;
+use BraspagApi\Http\Requests\AntiFraudRequest;
+use BraspagApi\Services\AntiFraudService;
 
 /**
  *
  */
-class AntiFraud
+class AntiFraud extends BaseController
 {
-    /**
-     * @var AntiFraudService
-     */
-    private $service;
-
     /**
      *
      */
@@ -29,15 +24,7 @@ class AntiFraud
      */
     public function make(AntiFraudRequest $antiFraudeRequest)
     {
-        return $this->service->antiFraude($antiFraudeRequest);
-    }
-
-    /**
-     * @return array
-     */
-    public function log()
-    {
-        return $this->service->log();
+        return $this->service->analyse($antiFraudeRequest);
     }
 }
 

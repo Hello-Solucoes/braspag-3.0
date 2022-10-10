@@ -6,9 +6,9 @@
  * Time: 10:44
  */
 
-namespace Braspag\Factories\Payment\FraudAnalysis\Travel;
+namespace BraspagApi\Factories\Payment\FraudAnalysis\Travel;
 
-use Braspag\Factories\Payment\FraudAnalysis\Travel\Passenger\TravelLegFactory;
+use BraspagApi\Factories\Payment\FraudAnalysis\Travel\Passenger\TravelLegFactory;
 
 /**
  *

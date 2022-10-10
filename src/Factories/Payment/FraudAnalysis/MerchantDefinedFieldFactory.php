@@ -6,7 +6,7 @@
  * Time: 10:41
  */
 
-namespace Braspag\Factories\Payment\FraudAnalysis;
+namespace BraspagApi\Factories\Payment\FraudAnalysis;
 
 /**
  *

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
-use Braspag\Entities\CreditCardEntity;
-use Braspag\Entities\CredentialsEntity;
+use BraspagApi\Entities\CreditCardEntity;
+use BraspagApi\Entities\CredentialsEntity;
 
 class PaymentEntity
 {
@@ -306,7 +306,7 @@ class PaymentEntity
     }
 
     /**
-     * @param \Braspag\Entities\CreditCardEntity $creditCard
+     * @param \BraspagApi\Entities\CreditCardEntity $creditCard
      * @return $this
      */
     public function setCreditCard(CreditCardEntity $creditCard)
@@ -324,7 +324,7 @@ class PaymentEntity
     }
 
     /**
-     * @param \Braspag\Entities\CredentialsEntity $credentials
+     * @param \BraspagApi\Entities\CredentialsEntity $credentials
      * @return $this
      */
     public function setCredentials(CredentialsEntity $credentials)

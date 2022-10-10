@@ -6,9 +6,9 @@
  * Time: 10:24
  */
 
-namespace Braspag\Factories\Payment;
+namespace BraspagApi\Factories\Payment;
 
-use function Braspag\Factories\app;
+use function BraspagApi\Factories\app;
 
 class PaymentFactory
 {

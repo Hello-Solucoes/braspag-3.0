@@ -1,22 +1,15 @@
 <?php
 
-namespace Braspag\Http\Controllers;
+namespace BraspagApi\Http\Controllers;
 
-use Braspag\Config;
-use Braspag\Http\Requests\CreditCardRequest;
-use Braspag\Services\CreditCardService;
+use BraspagApi\Http\Requests\CreditCardRequest;
+use BraspagApi\Services\CreditCardService;
 
 /**
  *
  */
-class CreditCardTransaction
+class CreditCardTransaction extends BaseController
 {
-
-    /**
-     * @var CreditCardService
-     */
-    private $service;
-
     /**
      *
      */
@@ -59,14 +52,6 @@ class CreditCardTransaction
     public function cancellation(CreditCardRequest $creditCardRequest)
     {
         return $this->service->cancellation($creditCardRequest);
-    }
-
-    /**
-     * @return array
-     */
-    public function log()
-    {
-        return $this->service->log();
     }
 }
 

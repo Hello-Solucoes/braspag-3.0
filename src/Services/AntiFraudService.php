@@ -1,9 +1,9 @@
 <?php
 
-namespace Braspag\Services;
+namespace BraspagApi\Services;
 
-use Braspag\Factories\AntiFraudFactory;
-use Braspag\Http\Requests\AntiFraudRequest;
+use BraspagApi\Factories\AntiFraudFactory;
+use BraspagApi\Http\Requests\AntiFraudRequest;
 
 /**
  *
@@ -14,10 +14,10 @@ class AntiFraudService extends BaseService
      * @param AntiFraudRequest $antiFraudeRequest
      * @return mixed|null
      */
-    public function antiFraude(AntiFraudRequest $antiFraudeRequest)
+    public function analyse(AntiFraudRequest $antiFraudeRequest)
     {
-        $this->resquest_json = (new AntiFraudFactory)->make($antiFraudeRequest);
-        $this->response_json = $this->client->antiFraud($this->resquest_json);
-        return $this->response_json;
+        $this->request = (new AntiFraudFactory)->make($antiFraudeRequest);
+        $this->response = $this->client->antiFraud($this->request);
+        return $this->response;
     }
 }

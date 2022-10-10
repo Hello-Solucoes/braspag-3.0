@@ -1,9 +1,9 @@
 <?php
 
-namespace Braspag;
+namespace BraspagApi;
 
 use GuzzleHttp\Client;
-use Braspag\Exceptions\BraspagException;
+use BraspagApi\Exceptions\BraspagException;
 use GuzzleHttp\Exception\ClientException;
 
 /**
@@ -39,12 +39,12 @@ class Braspag
     }
 
     /**
-     * @param int $paymentId
+     * @param $paymentId
      * @param array $headers
      * @return mixed
      * @throws BraspagException
      */
-    public function creditCardConsult(int $paymentId, array $headers = [])
+    public function creditCardConsult($paymentId, array $headers = [])
     {
         return $this->execute('GET', sprintf('/v2/sales/%s', $paymentId), $headers);
     }
@@ -61,24 +61,24 @@ class Braspag
     }
 
     /**
-     * @param int $paymentId
+     * @param $paymentId
      * @param array $headers
      * @return mixed
      * @throws BraspagException
      */
-    public function creditCardCapture(int $paymentId, array $headers = [])
+    public function creditCardCapture($paymentId, array $headers = [])
     {
         return $this->execute('PUT', sprintf('/v2/sales/%s/capture', $paymentId), $headers);
     }
 
     /**
-     * @param int $paymentId
+     * @param $paymentId
      * @param array $data
      * @param array $headers
      * @return mixed
      * @throws BraspagException
      */
-    public function creditCardCancellation(int $paymentId, array $data = [], array $headers = [])
+    public function creditCardCancellation($paymentId, array $data = [], array $headers = [])
     {
         return $this->execute('PUT', sprintf('/v2/sales/%s/void', $paymentId), $headers, $data);
     }

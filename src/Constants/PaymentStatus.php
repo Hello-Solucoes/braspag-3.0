@@ -6,7 +6,7 @@
  * Time: 11:29
  */
 
-namespace Braspag\Constants;
+namespace BraspagApi\Constants;
 
 /**
  *

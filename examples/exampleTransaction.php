@@ -2,16 +2,16 @@
 
 require '../vendor/autoload.php';
 
-use Braspag\Entities\AddressEntity;
-use Braspag\Entities\CardOnFileEntity;
-use Braspag\Entities\CredentialsEntity;
-use Braspag\Entities\CreditCardEntity;
-use Braspag\Entities\CustomerEntity;
-use Braspag\Entities\ExtraDataCollectionEntity;
-use Braspag\Entities\MerchantOrderEntity;
-use Braspag\Entities\PaymentEntity;
-use Braspag\Http\Controllers\CreditCardTransaction;
-use Braspag\Http\Requests\CreditCardRequest;
+use BraspagApi\Entities\AddressEntity;
+use BraspagApi\Entities\CardOnFileEntity;
+use BraspagApi\Entities\CredentialsEntity;
+use BraspagApi\Entities\CreditCardEntity;
+use BraspagApi\Entities\CustomerEntity;
+use BraspagApi\Entities\ExtraDataCollectionEntity;
+use BraspagApi\Entities\MerchantOrderEntity;
+use BraspagApi\Entities\PaymentEntity;
+use BraspagApi\Http\Controllers\CreditCardTransaction;
+use BraspagApi\Http\Requests\CreditCardRequest;
 
 
 $address = new AddressEntity;

@@ -1,5 +1,5 @@
 {
-    "name": "lucas-malicia/braspag-api",
+    "name": "hello-solucoes/braspag-api",
     "description": "This is a channel manager to deal with transaction of credit card",
     "license": "MIT",
     "minimum-stability": "dev",
@@ -8,6 +8,10 @@
         {
             "name": "Lucas Goiana Malicia",
             "email": "lucas@hellosolucoes.com.br"
+        },
+        {
+            "name": "Matheus Hack",
+            "email": "matheus@hellosolucoes.com.br"
         }
     ],
     "require": {
@@ -20,13 +24,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Braspag\\": "src"
+            "BraspagApi\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Braspag\\Providers\\BraspagApiServiceProvider"
+                "BraspagApi\\Providers\\BraspagApiServiceProvider"
             ]
         }
     }

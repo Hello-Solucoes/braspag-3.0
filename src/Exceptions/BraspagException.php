@@ -6,7 +6,7 @@
  * Time: 10:14
  */
 
-namespace Braspag\Exceptions;
+namespace BraspagApi\Exceptions;
 
 use Exception;
 

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Braspag\Http\Requests;
+namespace BraspagApi\Http\Requests;
 
-use Braspag\Entities\CustomerEntity;
-use Braspag\Entities\MerchantOrderEntity;
-use Braspag\Entities\PaymentEntity;
+use BraspagApi\Entities\CustomerEntity;
+use BraspagApi\Entities\MerchantOrderEntity;
+use BraspagApi\Entities\PaymentEntity;
 
 /**
  *

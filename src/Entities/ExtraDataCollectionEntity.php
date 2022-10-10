@@ -1,6 +1,6 @@
 <?php
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 class ExtraDataCollectionEntity
 {

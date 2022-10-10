@@ -1,16 +1,16 @@
 <?php
 
 
-namespace Braspag\Http\Requests;
+namespace BraspagApi\Http\Requests;
 
-use Braspag\Entities\CartEntity;
-use Braspag\Entities\CustomerEntity;
-use Braspag\Entities\FraudAnalysisEntity;
-use Braspag\Entities\MerchantOrderEntity;
-use Braspag\Entities\PassengersEntity;
-use Braspag\Entities\PaymentEntity;
-use Braspag\Entities\ShippingEntity;
-use Braspag\Entities\TravelEntity;
+use BraspagApi\Entities\CartEntity;
+use BraspagApi\Entities\CustomerEntity;
+use BraspagApi\Entities\FraudAnalysisEntity;
+use BraspagApi\Entities\MerchantOrderEntity;
+use BraspagApi\Entities\PassengersEntity;
+use BraspagApi\Entities\PaymentEntity;
+use BraspagApi\Entities\ShippingEntity;
+use BraspagApi\Entities\TravelEntity;
 
 /**
  *

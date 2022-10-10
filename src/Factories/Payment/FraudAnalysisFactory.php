@@ -6,13 +6,13 @@
  * Time: 10:29
  */
 
-namespace Braspag\Factories\Payment;
+namespace BraspagApi\Factories\Payment;
 
-use Braspag\Factories\Payment\FraudAnalysis\BrowserFactory;
-use Braspag\Factories\Payment\FraudAnalysis\CartFactory;
-use Braspag\Factories\Payment\FraudAnalysis\MerchantDefinedFieldFactory;
-use Braspag\Factories\Payment\FraudAnalysis\ShippingFactory;
-use Braspag\Factories\Payment\FraudAnalysis\TravelFactory;
+use BraspagApi\Factories\Payment\FraudAnalysis\BrowserFactory;
+use BraspagApi\Factories\Payment\FraudAnalysis\CartFactory;
+use BraspagApi\Factories\Payment\FraudAnalysis\MerchantDefinedFieldFactory;
+use BraspagApi\Factories\Payment\FraudAnalysis\ShippingFactory;
+use BraspagApi\Factories\Payment\FraudAnalysis\TravelFactory;
 
 class FraudAnalysisFactory
 {

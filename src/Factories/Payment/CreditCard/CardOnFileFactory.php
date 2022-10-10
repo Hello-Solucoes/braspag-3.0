@@ -6,7 +6,7 @@
  * Time: 10:37
  */
 
-namespace Braspag\Factories\Payment\CreditCard;
+namespace BraspagApi\Factories\Payment\CreditCard;
 
 /**
  *

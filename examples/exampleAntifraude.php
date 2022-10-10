@@ -2,26 +2,26 @@
 
 require '../vendor/autoload.php';
 
-use Braspag\Entities\AddressEntity;
-use Braspag\Entities\BrowserEntity;
-use Braspag\Entities\CardOnFileEntity;
-use Braspag\Entities\CartEntity;
-use Braspag\Entities\CredentialsEntity;
-use Braspag\Entities\CreditCardEntity;
-use Braspag\Entities\CustomerEntity;
-use Braspag\Entities\ExtraDataCollectionEntity;
-use Braspag\Entities\FraudAnalysisEntity;
-use Braspag\Entities\ItemEntity;
-use Braspag\Entities\MerchantDefinedFieldsDataEntity;
-use Braspag\Entities\MerchantDefinedFieldsEntity;
-use Braspag\Entities\MerchantOrderEntity;
-use Braspag\Entities\PassengersEntity;
-use Braspag\Entities\PaymentEntity;
-use Braspag\Entities\ShippingEntity;
-use Braspag\Entities\TravelEntity;
-use Braspag\Entities\TravelLegsEntity;
-use Braspag\Http\Controllers\AntiFraud;
-use Braspag\Http\Requests\AntiFraudRequest;
+use BraspagApi\Entities\AddressEntity;
+use BraspagApi\Entities\BrowserEntity;
+use BraspagApi\Entities\CardOnFileEntity;
+use BraspagApi\Entities\CartEntity;
+use BraspagApi\Entities\CredentialsEntity;
+use BraspagApi\Entities\CreditCardEntity;
+use BraspagApi\Entities\CustomerEntity;
+use BraspagApi\Entities\ExtraDataCollectionEntity;
+use BraspagApi\Entities\FraudAnalysisEntity;
+use BraspagApi\Entities\ItemEntity;
+use BraspagApi\Entities\MerchantDefinedFieldsDataEntity;
+use BraspagApi\Entities\MerchantDefinedFieldsEntity;
+use BraspagApi\Entities\MerchantOrderEntity;
+use BraspagApi\Entities\PassengersEntity;
+use BraspagApi\Entities\PaymentEntity;
+use BraspagApi\Entities\ShippingEntity;
+use BraspagApi\Entities\TravelEntity;
+use BraspagApi\Entities\TravelLegsEntity;
+use BraspagApi\Http\Controllers\AntiFraud;
+use BraspagApi\Http\Requests\AntiFraudRequest;
 
 $travelLegs = new TravelLegsEntity();
     $travelLegs->setOrigin("AMS")

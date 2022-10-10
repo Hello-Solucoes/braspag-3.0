@@ -6,9 +6,9 @@
  * Time: 09:33
  */
 
-namespace Braspag\Services;
+namespace BraspagApi\Services;
 
-use Braspag\Braspag;
+use BraspagApi\Braspag;
 
 /**
  *
@@ -39,13 +39,18 @@ class BaseService
     }
 
     /**
-     * @return array
+     * @param $only
+     * @return null
      */
-    public function log()
+    public function log($only = false)
     {
-        return [
-            'request' => $this->request,
-            'response' => $this->response
-        ];
+        switch ($only) {
+            default:
+                return null;
+            case 'request':
+                return $this->request;
+            case 'response':
+                return $this->response;
+        }
     }
 }

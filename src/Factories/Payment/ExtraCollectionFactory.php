@@ -6,7 +6,7 @@
  * Time: 10:29
  */
 
-namespace Braspag\Factories\Payment;
+namespace BraspagApi\Factories\Payment;
 
 /**
  *

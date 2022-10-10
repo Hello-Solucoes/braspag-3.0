@@ -1,15 +1,15 @@
 <?php
 
 
-namespace Braspag\Services;
+namespace BraspagApi\Services;
 
-use Braspag\Braspag;
-use Braspag\Config;
-use Braspag\Factories\CreditCardCaptureFactory;
-use Braspag\Factories\CreditCardCancellationFactory;
-use Braspag\Factories\CreditCardConsultFactory;
-use Braspag\Factories\CreditCardTransactionFactory;
-use Braspag\Http\Requests\CreditCardRequest;
+use BraspagApi\Braspag;
+use BraspagApi\Config;
+use BraspagApi\Factories\CreditCardCaptureFactory;
+use BraspagApi\Factories\CreditCardCancellationFactory;
+use BraspagApi\Factories\CreditCardConsultFactory;
+use BraspagApi\Factories\CreditCardTransactionFactory;
+use BraspagApi\Http\Requests\CreditCardRequest;
 
 /**
  *
@@ -19,7 +19,7 @@ class CreditCardService extends BaseService
     /**
      * @param CreditCardRequest $creditCardRequest
      * @return mixed
-     * @throws \Braspag\Exceptions\BraspagException
+     * @throws \BraspagApi\Exceptions\BraspagException
      */
     public function consult(CreditCardRequest $creditCardRequest)
     {
@@ -31,7 +31,7 @@ class CreditCardService extends BaseService
     /**
      * @param CreditCardRequest $creditCardRequest
      * @return mixed
-     * @throws \Braspag\Exceptions\BraspagException
+     * @throws \BraspagApi\Exceptions\BraspagException
      */
     public function transaction(CreditCardRequest $creditCardRequest)
     {
@@ -43,7 +43,7 @@ class CreditCardService extends BaseService
     /**
      * @param CreditCardRequest $creditCardRequest
      * @return mixed
-     * @throws \Braspag\Exceptions\BraspagException
+     * @throws \BraspagApi\Exceptions\BraspagException
      */
     public function capture(CreditCardRequest $creditCardRequest)
     {
@@ -55,7 +55,7 @@ class CreditCardService extends BaseService
     /**
      * @param CreditCardRequest $creditCardRequest
      * @return mixed
-     * @throws \Braspag\Exceptions\BraspagException
+     * @throws \BraspagApi\Exceptions\BraspagException
      */
     public function cancellation(CreditCardRequest $creditCardRequest)
     {

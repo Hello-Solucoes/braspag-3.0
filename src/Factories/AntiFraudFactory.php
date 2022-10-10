@@ -1,11 +1,11 @@
 <?php
 
-namespace Braspag\Factories;
+namespace BraspagApi\Factories;
 
-use Braspag\Factories\Customer\CustomerFactory;
-use Braspag\Factories\MerchantOrder\MerchantOrderFactory;
-use Braspag\Factories\Payment\PaymentFactory;
-use Braspag\Http\Requests\AntiFraudRequest;
+use BraspagApi\Factories\Customer\CustomerFactory;
+use BraspagApi\Factories\MerchantOrder\MerchantOrderFactory;
+use BraspagApi\Factories\Payment\PaymentFactory;
+use BraspagApi\Http\Requests\AntiFraudRequest;
 
 /**
  *
