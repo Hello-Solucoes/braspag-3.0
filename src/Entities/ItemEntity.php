@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 
 class ItemEntity
@@ -234,7 +234,6 @@ class ItemEntity
     }
 
 
-
     /**
      * @return mixed
      */
@@ -306,10 +305,4 @@ class ItemEntity
         $this->velocityHedge = $velocityHedge;
         return $this;
     }
-
-
-
-
-
-
 }

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 
 class MerchantDefinedFieldsDataEntity
@@ -9,7 +9,7 @@ class MerchantDefinedFieldsDataEntity
     /**
      * @var $merchanDefinesFieldsEntity
      */
-   private $merchanDefinesFieldsEntity =[];
+    private $merchanDefinesFieldsEntity = [];
 
     /**
      * @return mixed
@@ -28,9 +28,4 @@ class MerchantDefinedFieldsDataEntity
         $this->merchanDefinesFieldsEntity[] = $merchanDefinesFieldsEntity;
         return $this;
     }
-
-
-
-
-
 }

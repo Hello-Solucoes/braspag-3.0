@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 
 class ShippingEntity
@@ -74,8 +74,4 @@ class ShippingEntity
         $this->phone = $phone;
         return $this;
     }
-
-
-
-
 }

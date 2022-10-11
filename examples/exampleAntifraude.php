@@ -2,28 +2,28 @@
 
 require '../vendor/autoload.php';
 
-use Braspag\Entities\CustomerEntity;
-use Braspag\Entities\AddressEntity;
-use Braspag\Entities\PaymentEntity;
-use Braspag\Entities\CreditCardEntity;
-use Braspag\Entities\CardOnFileEntity;
-use Braspag\Entities\CredentialsEntity;
-use Braspag\Entities\ExtraDataCollectionEntity;
-use Braspag\Entities\MerchantOrderEntity;
-use Braspag\AntiFraude;
-use Braspag\Entities\FraudAnalysisEntity;
-use Braspag\Entities\BrowserEntity;
-use Braspag\Entities\CartEntity;
-use Braspag\Entities\ItemEntity;
-use Braspag\Requests\AntiFraudeRequest;
-use Braspag\Entities\MerchantDefinedFieldsEntity;
-use Braspag\Entities\TravelEntity;
-use Braspag\Entities\PassengersEntity;
-use Braspag\Entities\TravelLegsEntity;
-use Braspag\Entities\ShippingEntity;
-use Braspag\Entities\MerchantDefinedFieldsDataEntity;
+use BraspagApi\Entities\AddressEntity;
+use BraspagApi\Entities\BrowserEntity;
+use BraspagApi\Entities\CardOnFileEntity;
+use BraspagApi\Entities\CartEntity;
+use BraspagApi\Entities\CredentialsEntity;
+use BraspagApi\Entities\CreditCardEntity;
+use BraspagApi\Entities\CustomerEntity;
+use BraspagApi\Entities\ExtraDataCollectionEntity;
+use BraspagApi\Entities\FraudAnalysisEntity;
+use BraspagApi\Entities\ItemEntity;
+use BraspagApi\Entities\MerchantDefinedFieldsDataEntity;
+use BraspagApi\Entities\MerchantDefinedFieldsEntity;
+use BraspagApi\Entities\MerchantOrderEntity;
+use BraspagApi\Entities\PassengersEntity;
+use BraspagApi\Entities\PaymentEntity;
+use BraspagApi\Entities\ShippingEntity;
+use BraspagApi\Entities\TravelEntity;
+use BraspagApi\Entities\TravelLegsEntity;
+use BraspagApi\Http\Controllers\AntiFraud;
+use BraspagApi\Http\Requests\AntiFraudRequest;
 
-    $travelLegs = new TravelLegsEntity();
+$travelLegs = new TravelLegsEntity();
     $travelLegs->setOrigin("AMS")
         ->setDestination("GIG");
 
@@ -191,19 +191,14 @@ use Braspag\Entities\MerchantDefinedFieldsDataEntity;
     $merchantOrderId = new MerchantOrderEntity;
     $merchantOrderId->setMerchantOrderId('2017051001');
 
-    $antiFraudeRequest = new AntiFraudeRequest();
+    $antiFraudeRequest = new AntiFraudRequest();
     $antiFraudeRequest->setMerchantOrderIdEntity($merchantOrderId)
     ->setCustomerEntity($costumerEntity)
     ->setPaymentEntity($paymentEntity);
 
-    $antiFraude = new AntiFraude([
-        'production'=> false,
-        'consult'=> false,
-        'MerchantId' => '273321f7-8daa-4904-86f9-0392f6b4cc8c',
-        'MerchantKey' => 'XMYBOTJIDVCYYLHIWFGSVOFDXAJZUUHYUWZSSBPF'
-    ]);
+    $antiFraude = new AntiFraud();
 
-    print_r($antiFraude->make($antiFraudeRequest));
+    echo "<pre>";var_dump($antiFraude->make($antiFraudeRequest));exit;
 
 
 

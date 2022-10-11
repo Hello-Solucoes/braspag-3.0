@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 
 class FraudAnalysisEntity
@@ -281,6 +281,4 @@ class FraudAnalysisEntity
         $this->travel = $travel;
         return $this;
     }
-
-
 }

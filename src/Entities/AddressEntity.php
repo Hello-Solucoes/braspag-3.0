@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 
 class AddressEntity
@@ -181,5 +181,4 @@ class AddressEntity
         $this->country = $country;
         return $this;
     }
-
 }

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 
 class MerchantDefinedFieldsEntity
@@ -52,7 +52,4 @@ class MerchantDefinedFieldsEntity
         $this->value = $value;
         return $this;
     }
-
-
-
 }

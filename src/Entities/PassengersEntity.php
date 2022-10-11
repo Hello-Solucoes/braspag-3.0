@@ -1,44 +1,44 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 
 class PassengersEntity
 {
     /**
-    * @var $name
-    */
+     * @var $name
+     */
     private $name;
 
     /**
-    * @var $identity
-    */
+     * @var $identity
+     */
     private $identity;
 
     /**
-    * @var $status
-    */
+     * @var $status
+     */
     private $status;
 
     /**
-    * @var $rating
-    */
+     * @var $rating
+     */
     private $rating;
 
     /**
-    * @var $email
-    */
+     * @var $email
+     */
     private $email;
 
     /**
-    * @var $phone
-    */
+     * @var $phone
+     */
     private $phone;
 
     /**
-    * @var $travelLegs
-    */
+     * @var $travelLegs
+     */
     private $travelLegs;
 
     /**
@@ -166,6 +166,4 @@ class PassengersEntity
         $this->travelLegs = $travelLegs;
         return $this;
     }
-
-
 }

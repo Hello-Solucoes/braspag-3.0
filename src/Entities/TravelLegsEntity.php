@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 
 class TravelLegsEntity
@@ -51,8 +51,4 @@ class TravelLegsEntity
         $this->destination = $destination;
         return $this;
     }
-
-
-
-
 }

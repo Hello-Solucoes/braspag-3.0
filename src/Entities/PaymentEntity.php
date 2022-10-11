@@ -1,87 +1,87 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
-use Braspag\Entities\CreditCardEntity;
-use Braspag\Entities\CredentialsEntity;
+use BraspagApi\Entities\CreditCardEntity;
+use BraspagApi\Entities\CredentialsEntity;
 
 class PaymentEntity
 {
     /**
      * @var $provider
      */
-    private  $provider;
+    private $provider;
 
     /**
      * @var $amount
      */
-    private  $amount;
+    private $amount;
 
     /**
      * @var $type
      */
-    private  $type;
+    private $type;
 
     /**
      * @var $currency
      */
-    private  $currency;
+    private $currency;
 
     /**
      * @var $country
      */
-    private  $country;
+    private $country;
 
     /**
      * @var $installments
      */
-    private  $installments;
+    private $installments;
 
     /**
      * @var $interest
      */
-    private  $interest;
+    private $interest;
 
     /**
      * @var $capture
      */
-    private  $capture;
+    private $capture;
 
     /**
      * @var $authenticate
      */
-    private  $authenticate;
+    private $authenticate;
 
     /**
      * @var $recurrent
      */
-    private  $recurrent;
+    private $recurrent;
 
     /**
      * @var $softDescriptor
      */
-    private  $softDescriptor;
+    private $softDescriptor;
 
     /**
      * @var $doSplit
      */
-    private  $doSplit;
+    private $doSplit;
 
     /**
      * @var $creditCard
      */
-    private  $creditCard;
+    private $creditCard;
 
     /**
      * @var $credentials
      */
-    private  $credentials;
+    private $credentials;
 
     /**
      * @var $extraDataCollection
      */
-    private  $extraDataCollection;
+    private $extraDataCollection;
 
     /**
      * @var $fraudAnalysis
@@ -306,7 +306,7 @@ class PaymentEntity
     }
 
     /**
-     * @param \Braspag\Entities\CreditCardEntity $creditCard
+     * @param \BraspagApi\Entities\CreditCardEntity $creditCard
      * @return $this
      */
     public function setCreditCard(CreditCardEntity $creditCard)
@@ -324,7 +324,7 @@ class PaymentEntity
     }
 
     /**
-     * @param \Braspag\Entities\CredentialsEntity $credentials
+     * @param \BraspagApi\Entities\CredentialsEntity $credentials
      * @return $this
      */
     public function setCredentials(CredentialsEntity $credentials)
@@ -364,9 +364,7 @@ class PaymentEntity
     public function setPaymentId($paymentId)
     {
         $this->paymentId = $paymentId;
-
         return $this;
-
     }
 
     /**
@@ -386,7 +384,4 @@ class PaymentEntity
         $this->fraudAnalysis = $fraudAnalysis;
         return $this;
     }
-
-
-
 }

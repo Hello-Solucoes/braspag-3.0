@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 
 class CreditCardEntity
@@ -181,5 +181,4 @@ class CreditCardEntity
         $this->cardOnFile = $cardOnFile;
         return $this;
     }
-
 }

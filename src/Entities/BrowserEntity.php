@@ -1,12 +1,11 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 
 class BrowserEntity
 {
-
     /**
      * @var $cookiesAccepted
      */
@@ -91,16 +90,16 @@ class BrowserEntity
      */
     public function getIpAddress()
     {
-        return $this->IpAddress;
+        return $this->ipAddress;
     }
 
     /**
-     * @param mixed $IpAddress
+     * @param mixed $ipAddress
      * @return BrowserEntity
      */
-    public function setIpAddress($IpAddress)
+    public function setIpAddress($ipAddress)
     {
-        $this->IpAddress = $IpAddress;
+        $this->ipAddress = $ipAddress;
         return $this;
     }
 
@@ -114,7 +113,7 @@ class BrowserEntity
 
     /**
      * @param mixed $type
-         * @return BrowserEntity
+     * @return BrowserEntity
      */
     public function setType($type)
     {

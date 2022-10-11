@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 
 class CardOnFileEntity
@@ -22,7 +22,6 @@ class CardOnFileEntity
     public function getUsage()
     {
         return $this->usage;
-
     }
 
     /**
@@ -32,7 +31,6 @@ class CardOnFileEntity
     {
         $this->usage = $usage;
         return $this;
-
     }
 
     /**
@@ -41,7 +39,6 @@ class CardOnFileEntity
     public function getReason()
     {
         return $this->reason;
-
     }
 
     /**
@@ -52,5 +49,4 @@ class CardOnFileEntity
         $this->reason = $reason;
         return $this;
     }
-
 }

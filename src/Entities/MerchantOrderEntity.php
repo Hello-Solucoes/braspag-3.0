@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 
 class MerchantOrderEntity
@@ -27,6 +27,4 @@ class MerchantOrderEntity
         $this->merchantOrderId = $merchantOrderId;
         return $this;
     }
-
-
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Braspag\Entities;
+namespace BraspagApi\Entities;
 
 class CredentialsEntity
 {
@@ -113,6 +113,4 @@ class CredentialsEntity
         $this->signature = $signature;
         return $this;
     }
-
-
 }
